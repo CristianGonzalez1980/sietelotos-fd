@@ -1,0 +1,20 @@
+.slider .slides li img {
+    max-height: 100%;
+    max-width : 100%; 
+}
+/*
+#indicatorsHomeBanner {
+    margin-top: -1%;
+}
+*/
+@media only screen and (max-width: 600px) {
+    #indicatorsHomeBanner {
+        margin-top: -23%;
+    }
+  }
+
+@media only screen and (min-width: 600px) {
+    #indicatorsHomeBanner {
+        margin-top: -2%;
+    }
+  }

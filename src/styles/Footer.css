@@ -1,0 +1,182 @@
+.a {
+  color: aliceblue;
+}
+
+#contFooter {
+  width: 100%;
+}
+
+#wpFooter {
+  margin-top: -13px;
+  margin-bottom: -15px;
+  margin-left: -21px;
+}
+
+#iconFooter {
+  margin-left: 100px;
+}
+
+#linkList {
+  color: aliceblue !important;
+}
+
+.page-footer {
+  padding-top: 20px;
+  color: #fff;
+  background-color: #cb1f30;
+  min-height: 28rem;
+}
+/*
+.float{
+	position:fixed;
+  width: 45px;
+  height: 45px;
+  padding: 5px 10px;
+	bottom:40px;
+	right:40px;
+	background-color:#4dc247;
+	color:#FFF;
+  border-radius:50px;
+  vertical-align: middle;
+	/*text-align:center;*//*
+  font-size:30px;
+	box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+  z-index:100;
+}
+
+.my-float{
+	margin-bottom: 15px;
+}
+*/
+.containerF{
+  margin-top: 30px;
+}
+
+@font-face {
+  font-family: "FontAwesome";
+  font-weight: normal;
+    font-display: auto;
+  font-style: normal;
+  src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2") format("woff2");
+}
+
+.fa {
+  display:inline-block;
+  font:normal normal normal 14px/1 FontAwesome;
+  font-size:inherit;
+  text-rendering:auto;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale
+ }
+
+ .fa-phone:before {
+  content:"\f095"
+ }
+
+ .fa-whatsapp::before {
+  content: "\f232";
+ }
+
+ .btn {
+  cursor: pointer;
+  -webkit-transition: 0.3s all;
+  font-size: 14px;
+  transition: 0.3s all;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #31b7bc;
+  border-radius: 80px;
+  border: 0;
+  background-image: none !important;
+  text-shadow: none !important; }
+  .btn:hover {
+    text-decoration: none !important; }
+  .btn:hover, .btn:focus, .btn:active, .btn.active {
+    color: #949494;
+    text-decoration: none;
+    transition: none;
+    box-shadow: none;
+    background-image: none;
+    background-color: #31b7bc;
+    outline-width: 0 !important; }
+
+ .float-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 99;
+  text-align: right;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  padding: 7px;
+  box-shadow: 2px 2px 4px #555;
+  border: 2px solid #fff;
+}
+
+ .float-btn::after {
+  content: '';
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  display: block;
+  background: #fff;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.float-btn::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  bottom: -1px;
+  left: 0px;
+  transform: skew(-10deg, -10deg);
+  z-index: -1;
+  box-shadow: 2px 2px 4px #555;
+}
+.float-btn span::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: linear-gradient(35deg, rgb(42, 183, 64) 45%, #54EC68 100%);
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.float-btn span::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  display: block;
+  background: #2AB740;
+  bottom: 3px;
+  left: 4px;
+  transform: skew(-10deg, -10deg);
+  z-index: 1;
+}
+
+.float-btn a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  border-radius: 50%;
+}
+
+.float-btn .fa-whatsapp { position: relative; top: 2px; left: 1px; z-index: 2; }
+.float-btn .fa-whatsapp::before { content: '\f095'; font-size: 32px; color: #fff; }
