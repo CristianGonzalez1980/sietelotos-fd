@@ -1,13 +1,13 @@
 .mycard {
-  width: 40%;
+  width: 50%;
   height: 34rem;
-  margin-left: 30%;
-  margin-right: 30%; 
+  margin-left: 25%;
+  margin-right: 25%; 
   margin-top: 13rem;
 }
 
 #botonLogin {
-  background-color: #ff7077  !important;
+  background-color: burlywood  !important;
   color: white;
   margin-left: 43%;
 
@@ -21,13 +21,13 @@
 }
 
 #linkRegister {
-  color: #ff7077 ;
+  color: burlywood ;
   margin-right: 0.5%;
 }
 
 .logo-login {
-  width: 30%;
-  margin-left: 37%;
+  width: 40%;
+  margin-left: 30%;
 }
 
 #inputLogin {

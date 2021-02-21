@@ -53,21 +53,21 @@ const Singup = () => {
         <img alt='logo' className="logo-login" src={logo} />
         <input
           type="text"
-          placeholder="Ingrese nombre"
+          placeholder="Nombre"
           id='inputLogin'
           value={nombre}
           onChange={(e) => setnombre(e.target.value)}
         />
         <input
           type="text"
-          placeholder="Ingrese apellido"
+          placeholder="Apellido"
           id='inputLogin'
           value={apellido}
           onChange={(e) => setapellido(e.target.value)}
         />
         <input
           type="number"
-          placeholder="Ingrese DNI"
+          placeholder="DNI"
           id='inputLogin'
           value={dni}
           onChange={(e) => setdni(e.target.value)}

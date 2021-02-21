@@ -15,11 +15,11 @@ const Footer = () => {
           <div className="col s4">
             <h5 className="white-text" id="footerT">Categorías</h5>
             <ul>
-              <li><Link id="linkList" to="/contact">Contacto</Link></li>
-              <li><Link id="linkList" to="/aboutus">¿Quiénes somos?</Link></li>
               <li><Link id="linkList" to="/suppliers">Productos</Link></li>
               <li><Link id="linkList" to="/faqs">Preguntas frecuentes</Link></li>
               <li><Link id="linkList" to="/howtobuy">¿Cómo comprar?</Link></li>
+              <li><Link id="linkList" to="/aboutus">¿Quiénes somos?</Link></li>
+              <li><Link id="linkList" to="/contact">Contacto</Link></li>
             </ul>
           </div>
           <div className="col s4">
@@ -28,17 +28,17 @@ const Footer = () => {
               <li>
                 <div>
                   <div className="row">
-                    <div className="col s1" id="iconFooter">
+                    <div className="col s2" id="iconFooter">
                       <SocialIcon className="SocialIcon" network="whatsapp" bgColor="#ffffff" style={{ height: 25, width: 25 }} />
                     </div>
-                    <div className="col s11" id="wpFooter">+5491123869642</div>
+                    <div className="col s10" id="wpFooter">+5491123869642</div>
                   </div>
                 </div>
               </li>
               <li>
                 <div className="row">
-                  <div className="col s1" id="iconFooter"><i className="material-icons">email</i></div>
-                  <div className="col s11" id="wpFooter">eventos@guiadelarte.com.ar</div>
+                  <div className="col s2" id="iconFooter"><i className="material-icons">email</i></div>
+                  <div className="col s10" id="wpFooter">eventos@guiadelarte.com.ar</div>
                 </div>
               </li>
             </ul>

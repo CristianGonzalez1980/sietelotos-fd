@@ -40,10 +40,11 @@ const NavBar = () => {
                     id="botonSesion"
                     className="btn #c62828 red darken-3"
                     onClick={() => {
+                        let username=localStorage.getItem('nombre')
                         localStorage.clear();
                         dispatch({ type: "CLEAR" });
                         M.toast({
-                            html: "Ha cerrado su sesión",
+                            html: `${username} has cerrado tu sesión`,
                             classes: "#388e3c green darken-2",
                         });
                         history.push("/");
@@ -69,9 +70,14 @@ const NavBar = () => {
         if (state === "admin") {
             return (
                 <Link to="/admin">
-                    <i className="small material-icons left" id="iconSearch">settings</i>
+                    <i className="small material-icons left" id="iconAdmin">settings</i>
                 </Link>)
-        }
+        }/*  else {
+            return (
+                <div id="usuario" className={mouse ? "animate__animated animate__tada animate__infinite infinite" : " "} onMouseEnter={() => setMouse(true)} onMouseLeave={() => setMouse(false)}>
+                    {"Usuario: "}{localStorage.getItem('nombre')} {localStorage.getItem('apellido')} {"   "}
+                </div>)
+        } */
     }
 
     return (
@@ -81,7 +87,7 @@ const NavBar = () => {
 
                     <div className="NavBar">
                         <div className="row">
-                            <div className="col s3" >
+                            <div className="col s4" >
                                 <img alt="logo" id='imgLogo' src={logo} />
                             </div>
                             <div className="col s4">
@@ -89,20 +95,15 @@ const NavBar = () => {
                                     <input className="form-control sm-2" onKeyPress={event => event.key === 'Enter'} onChange={(e) => setTextSearch(e.target.value)} value={textsearch} id='inputSearch' type="search" placeholder="Buscar" aria-label="Search" />
                                 </form>
                             </div>
-                            <div className="col s1">
+                            <div className="col s2">
                                 <Link to={textsearch ? `/resultsearch/${textsearch}` : "/resultsearch/_"}>
                                     <i className="small material-icons left" id="iconSearch" onClick={() => setTextSearch("")}>search</i>
                                 </Link>
                             </div>
-                            <div className="col s1">
+{/*                             <div className="col s1">
                                 {renderPanelAdmin()}
-                            </div>
-                            <div className="col s1">
-                                <div id="usuario" className={mouse ? "animate__animated animate__tada animate__infinite infinite" : " "} onMouseEnter={() => setMouse(true)} onMouseLeave={() => setMouse(false)}>
-                                    {localStorage.getItem('nombre')} {localStorage.getItem('apellido')}
-                                </div>
-                            </div>
-                            <div className="col s1">
+                            </div> */}
+                            <div className="col s2">
                                 <Link to="/shoppingcart">
                                     <p id='cantidadProductos'>
                                         {context.cart.reduce((count, curItem) => { return count + curItem.quantity; }, 0)}
@@ -110,9 +111,9 @@ const NavBar = () => {
                                     <i className="small material-icons left" id="iconCart">shopping_cart</i>
                                 </Link>
                             </div>
-                            <div id="colBotonSesion" className="col s1">
+{/*                             <div id="colBotonSesion" className="col s2">
                                 {renderButton()}
-                            </div>
+                            </div> */}
                         </div>
                         <nav>
                             <div className="nav-wrapper">
@@ -124,6 +125,8 @@ const NavBar = () => {
                                     <li><Link className={CómoComprar ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setCómoComprar(true)} onMouseLeave={() => setCómoComprar(false)} to="/howtobuy">¿Cómo comprar?</Link></li>
                                     <li><Link className={QuiénesSomos ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setQuiénesSomos(true)} onMouseLeave={() => setQuiénesSomos(false)} to="/aboutus">¿Quiénes somos?</Link></li>
                                     <li><Link className={Contacto ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setContacto(true)} onMouseLeave={() => setContacto(false)} to="/contact">Contacto</Link></li>
+                                    <li>{renderPanelAdmin()}</li>
+                                    <li>{renderButton()}</li>
                                 </ul>
                             </div>
                         </nav>
@@ -134,6 +137,8 @@ const NavBar = () => {
                             <li ><Link to="/howtobuy">¿Cómo comprar?</Link></li>
                             <li ><Link to="/aboutus">¿Quiénes Somos?</Link></li>
                             <li ><Link to="/contact">Contacto</Link></li>
+                            <li>{renderPanelAdmin()}</li>
+                            <li>{renderButton()}</li>
                         </ul>
                     </div>
                 </React.Fragment>

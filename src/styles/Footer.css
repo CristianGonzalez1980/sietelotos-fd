@@ -1,21 +1,37 @@
 .a {
-  color: #ff7077 ;
+  color: burlywood ;
+}
+
+@media only screen and (max-width: 600px) {
+  #iconFooter,
+  #wpFooter,
+  #footerT{
+    font-size:x-small; 
+    }
+}
+
+@media only screen and (min-width: 600px) {
+  #iconFooter,
+  #wpFooter,
+  #footerT{
+    font-size:large; 
+    }
 }
 
 #contFooter {
   width: 100%;
 }
 
-#wpFooter {
+/* #wpFooter {
   vertical-align:super; 
-}
+} */
 /* 
 #iconFooter {
   margin-left: 0px;
 } */
 
 #linkList {
-  color: #ff7077  !important;
+  color: burlywood  !important;
 }
 
 .page-footer {

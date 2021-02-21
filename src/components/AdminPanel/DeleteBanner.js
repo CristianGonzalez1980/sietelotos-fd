@@ -23,12 +23,12 @@ const DeleteBanner = () => {
   }
 
   useEffect(() => {
-    if (banners.length !== prevBanners.length || prevBanners.length === 0) {//cargaba los banners constantemente
+    /* if (banners.length !== prevBanners.length || prevBanners.length === 0) { *///cargaba los banners constantemente
       postearGetEntity({
         entityClass: "banners", fx: saveBannerHistory
       });
-    }
-  }, [banners, prevBanners]);
+    /* } */
+  }, [/* banners, prevBanners */]);
 
   const deleteBanner = (id) => {
     postearDeleteEntity({ historyProp: history, entityClass: "banners", id: id });

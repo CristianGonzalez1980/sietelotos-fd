@@ -28,6 +28,30 @@
 .red.lighten-2 {
   background-color:#b80090 !important;
   color: white;
-  width: 95%;
-  margin-left: 0.7rem;
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+/*   font-size: 1rem; */
  }
+
+ /* @media only screen and (min-width: 0) {
+  #fontSizeAdmin {
+   font-size:7px
+  }
+ } */
+ @media only screen and (max-width: 600px) {
+  .red.lighten-2,
+  #fontSizeAdmin/* ,
+  .collapsible-body,
+  .collapsible-header  */{
+   font-size:xx-small;
+  }
+ }
+ @media only screen and (min-width: 600px) {
+  .red.lighten-2,
+  #fontSizeAdmin/* ,
+  .collapsible-body,
+  .collapsible-header */ {
+   font-size: medium;
+  }
+}

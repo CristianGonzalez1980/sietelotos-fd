@@ -17,13 +17,13 @@ const AdminOptions = () => {
         const list = buttonsGroup.map((button) => {
             const links = button.buttons.map((buttonLink) => {
                 return (
-                    <Link className="waves-effect waves-light red lighten-2 btn-large" to={buttonLink.route} >{buttonLink.name}</Link>
+                    <Link id="fontSizeAdmin" className="waves-effect waves-light red lighten-2 btn-large" to={buttonLink.route} >{buttonLink.name}</Link>
                 )
             })
             return (
                 <li>
-                    <div className="collapsible-header"><i className="material-icons">{button.icon}</i>{button.name}</div>
-                    <div className="collapsible-body">
+                    <div id="fontSizeAdmin" className="collapsible-header"><i className="material-icons">{button.icon}</i>{button.name}</div>
+                    <div id="fontSizeAdmin" className="collapsible-body">
                         {links}
                     </div>
                 </li>

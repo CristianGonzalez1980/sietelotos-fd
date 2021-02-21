@@ -28,7 +28,7 @@ const Login = () => {
           localStorage.setItem("user", "usuario");
           dispatch({ type: "USER", payload: "user" });
           M.toast({
-            html: `Bienvenido ${localStorage.nombre}`,
+            html: `Bienvenida/o ${localStorage.nombre}`,
             classes: "#388e3c green darken-2",
           });
           console.log("success", success.headers.authorization);
@@ -49,7 +49,7 @@ const Login = () => {
         <input
           type="number"
           id='inputLogin'
-          placeholder="Ingrese DNI"
+          placeholder="DNI"
           value={dni}
           onChange={(e) => setdni(e.target.value)}
         />
