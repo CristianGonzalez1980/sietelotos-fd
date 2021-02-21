@@ -3,7 +3,7 @@ import { userContext } from "../../App"
 import "../../styles/Singin.css";
 import { Link, useHistory } from "react-router-dom";
 import M from "materialize-css";
-import logo from "../../images/logo.png"
+import logo from "../../images/logoWhite.png"
 
 const Login = () => {
   const history = useHistory();
@@ -13,7 +13,7 @@ const Login = () => {
 
 
   const PostData = () => {
-    fetch("https://exposicion-virtual.herokuapp.com/login/admin", {
+    fetch("https://sietelotos.herokuapp.com/login/admin", {
       method: "POST",
       headers: {
         "Content-type": "application/json",

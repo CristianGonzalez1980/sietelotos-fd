@@ -12,10 +12,12 @@
 }
 
 #noHayElementos {
-  font-size: 4rem;
-  margin-top: 4rem;
-  margin-left: 5%;
+  font-size: 3rem;
+  margin-top: 5rem;
+  margin-left: 19%;
+  margin-right: 19%;
   min-height: 20rem;
+  display: inline-table;
 }
 
 button {

@@ -3,7 +3,7 @@ import { Link, useHistory } from "react-router-dom";
 import { userContext } from "../../App"
 import "../../styles/Singin.css";
 import M from "materialize-css";
-import logo from "../../images/logo.png"
+import logo from "../../images/logoWhite.png"
 import axios from "axios";
 
 const Login = () => {
@@ -15,7 +15,7 @@ const Login = () => {
     if (dni < 1000000) {
       M.toast({ html: "DNI Inválido", classes: "#c62828 red darken-3" });
     } else {
-      axios.post("https://exposicion-virtual.herokuapp.com/login",
+      axios.post("https://sietelotos.herokuapp.com/login",
         {
           dni: dni
         },

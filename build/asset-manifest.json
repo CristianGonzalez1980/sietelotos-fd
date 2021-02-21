@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.b9c2f1e8.chunk.css",
-    "main.js": "/static/js/main.0e39dcf3.chunk.js",
-    "main.js.map": "/static/js/main.0e39dcf3.chunk.js.map",
+    "main.css": "/static/css/main.68158bfa.chunk.css",
+    "main.js": "/static/js/main.86c2f6e2.chunk.js",
+    "main.js.map": "/static/js/main.86c2f6e2.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.245ca5e1.js",
     "runtime-main.js.map": "/static/js/runtime-main.245ca5e1.js.map",
-    "static/js/2.81690d09.chunk.js": "/static/js/2.81690d09.chunk.js",
-    "static/js/2.81690d09.chunk.js.map": "/static/js/2.81690d09.chunk.js.map",
+    "static/js/2.2911961b.chunk.js": "/static/js/2.2911961b.chunk.js",
+    "static/js/2.2911961b.chunk.js.map": "/static/js/2.2911961b.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.b9c2f1e8.chunk.css.map": "/static/css/main.b9c2f1e8.chunk.css.map",
-    "static/js/2.81690d09.chunk.js.LICENSE.txt": "/static/js/2.81690d09.chunk.js.LICENSE.txt",
-    "static/media/PaginaNoEncontrada.css": "/static/media/backgroundChristmasTime.59b8f141.jpg",
+    "static/css/main.68158bfa.chunk.css.map": "/static/css/main.68158bfa.chunk.css.map",
+    "static/js/2.2911961b.chunk.js.LICENSE.txt": "/static/js/2.2911961b.chunk.js.LICENSE.txt",
+    "static/media/PaginaNoEncontrada.css": "/static/media/sietelotosbkg.59b8f141.jpg",
     "static/media/logo.7ade9cce.png": "/static/media/logo.7ade9cce.png"
   },
   "entrypoints": [
     "static/js/runtime-main.245ca5e1.js",
-    "static/js/2.81690d09.chunk.js",
-    "static/css/main.b9c2f1e8.chunk.css",
-    "static/js/main.0e39dcf3.chunk.js"
+    "static/js/2.2911961b.chunk.js",
+    "static/css/main.68158bfa.chunk.css",
+    "static/js/main.86c2f6e2.chunk.js"
   ]
 }

@@ -227,7 +227,7 @@ const TestForm = () => {
 // const postearPago = (tokenString) => {
 //   console.log(installments)
 //   if(cartTotal && unitPrice && email && description && amount && quantity && token){//cartTotal && unitPrice && email && description && amount && quantity && token){
-//   fetch("https://exposicion-virtual.herokuapp.com/process_payment/", {
+//   fetch("https://sietelotos.herokuapp.com/process_payment/", {
 //     method: "POST",
 //     headers: {
 //       "Content-type": "application/json",

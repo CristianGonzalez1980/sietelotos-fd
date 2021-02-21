@@ -20,7 +20,7 @@ const ResultSearch = () => {
           if(products.length === 0){
             return(
               <h2 id="googleFont">
-                No existen resultados para la búsqueda 
+                ¡No existen resultados para la búsqueda! 
               </h2>)
           }else{
             console.log(textsearch)

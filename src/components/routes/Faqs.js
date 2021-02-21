@@ -12,7 +12,7 @@ const Faqs = () => {
       postearGetEntity({ entityClass: "banners/PAYMENTMETHODS", fx: setimagesPM });
     }
   }, [imagesPM])
-  
+
   useEffect(() => {
     if (!imagesC) {
       postearGetEntity({ entityClass: "banners/COURRIER", fx: setimagesC });
@@ -20,7 +20,21 @@ const Faqs = () => {
   }, [imagesC])
 
   const payMethodImg = () => {
-    if (imagesPM) {
+    if (!imagesPM || imagesPM.length === 0) {
+      return (
+        <div className="preloader-wrapper active">
+          <div className="spinner-layer spinner-red-only">
+            <div className="circle-clipper left">
+              <div className="circle"></div>
+            </div><div className="gap-patch">
+              <div className="circle"></div>
+            </div><div className="circle-clipper right">
+              <div className="circle"></div>
+            </div>
+          </div>
+        </div>
+      )
+    } else {
       const list = imagesPM.map((image) => {
         return (
           image.image
@@ -34,7 +48,21 @@ const Faqs = () => {
   }
 
   const CourrierImg = () => {
-    if (imagesC) {
+    if (!imagesC || imagesC.length === 0) {
+      return (
+        <div className="preloader-wrapper active">
+          <div className="spinner-layer spinner-red-only">
+            <div className="circle-clipper left">
+              <div className="circle"></div>
+            </div><div className="gap-patch">
+              <div className="circle"></div>
+            </div><div className="circle-clipper right">
+              <div className="circle"></div>
+            </div>
+          </div>
+        </div>
+      )
+    } else {
       return (
         <div className="rowcourrier">
           <div className="col s6">

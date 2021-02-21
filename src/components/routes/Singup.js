@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../../styles/Singin.css";
 import { Link, useHistory } from "react-router-dom";
 import M from "materialize-css";
-import logo from "../../images/logo.png"
+import logo from "../../images/logoWhite.png"
 
 const Singup = () => {
   const history = useHistory();
@@ -14,7 +14,7 @@ const Singup = () => {
     if (!(nombre && apellido && dni)) {
       M.toast({ html: "Debe ingresar todos los datos", classes: "#c62828 red darken-3" });
     } else {
-      fetch("https://exposicion-virtual.herokuapp.com/register", {
+      fetch("https://sietelotos.herokuapp.com/register", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

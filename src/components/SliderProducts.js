@@ -24,7 +24,7 @@ const SliderProducts = () => {
   }
 
   const getListOfProducts = () => {
-    if (!products) {
+    if (!products || products.length === 0 ) {
       return (
         <div className="preloader-wrapper active">
           <div className="spinner-layer spinner-red-only">

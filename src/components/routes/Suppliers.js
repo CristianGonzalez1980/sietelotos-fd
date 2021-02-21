@@ -20,7 +20,7 @@ const Suppliers = () => {
   }, [companies])
 
   const getSProveedores = () => {
-    if (companies) {
+    {
       const listOfCompanies = companies.map((company) => {
         return (
           <li key={company.id} id="listaDeProductos">
@@ -39,21 +39,18 @@ const Suppliers = () => {
   return (
     <div>
       {
-        !companies ?
+        !companies || companies.length === 0 ?
           <div>
             <div class="preloader-wrapper big active">
               <div class="spinner-layer spinner-blue">
                 <div class="circle-clipper left">
-                  <div class="circle">
-                  </div>
+                  <div class="circle"></div>
                 </div>
                 <div class="gap-patch">
-                  <div class="circle">
-                  </div>
+                  <div class="circle"></div>
                 </div>
                 <div class="circle-clipper right">
-                  <div class="circle">
-                  </div>
+                  <div class="circle"></div>
                 </div>
               </div>
             </div>

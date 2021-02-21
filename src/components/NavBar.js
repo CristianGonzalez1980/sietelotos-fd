@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link, useHistory } from 'react-router-dom'
-import logo from '../images/logo.png'
+import logo from '../images/logoWhite.png'
 import "../styles/Navbar.css"
 import M from 'materialize-css'
 import ShopContext from './context/shop-context'
@@ -17,8 +17,7 @@ const NavBar = () => {
     const { state, dispatch } = useContext(userContext);
     const [mouse, setMouse] = useState(false)
     const [Inicio, setInicio] = useState(false)
-    const [Empresas, setEmpresas] = useState(false)
-    const [EnVivo, setEnVivo] = useState(false)
+    const [Productos, setProductos] = useState(false)
     const [Preguntas, setPreguntas] = useState(false)
     const [CómoComprar, setCómoComprar] = useState(false)
     const [QuiénesSomos, setQuiénesSomos] = useState(false)
@@ -82,10 +81,10 @@ const NavBar = () => {
 
                     <div className="NavBar">
                         <div className="row">
-                            <div className="col s2" >
+                            <div className="col s3" >
                                 <img alt="logo" id='imgLogo' src={logo} />
                             </div>
-                            <div className="col s5">
+                            <div className="col s4">
                                 <form className="form-inline" onSubmit={handleSubmit}>
                                     <input className="form-control sm-2" onKeyPress={event => event.key === 'Enter'} onChange={(e) => setTextSearch(e.target.value)} value={textsearch} id='inputSearch' type="search" placeholder="Buscar" aria-label="Search" />
                                 </form>
@@ -120,8 +119,7 @@ const NavBar = () => {
                                 <a href="" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
                                 <ul className="left hide-on-med-and-down">
                                     <li><Link className={Inicio ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setInicio(true)} onMouseLeave={() => setInicio(false)} to="/">Inicio</Link></li>
-                                    <li><Link className={Empresas ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setEmpresas(true)} onMouseLeave={() => setEmpresas(false)} to="/suppliers">Empresas</Link></li>
-                                    <li><Link className={EnVivo ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setEnVivo(true)} onMouseLeave={() => setEnVivo(false)} to="/live">En vivo</Link></li>
+                                    <li><Link className={Productos ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setProductos(true)} onMouseLeave={() => setProductos(false)} to="/suppliers">Productos</Link></li>
                                     <li><Link className={Preguntas ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setPreguntas(true)} onMouseLeave={() => setPreguntas(false)} to="/faqs">Preguntas frecuentes</Link></li>
                                     <li><Link className={CómoComprar ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setCómoComprar(true)} onMouseLeave={() => setCómoComprar(false)} to="/howtobuy">¿Cómo comprar?</Link></li>
                                     <li><Link className={QuiénesSomos ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setQuiénesSomos(true)} onMouseLeave={() => setQuiénesSomos(false)} to="/aboutus">¿Quiénes somos?</Link></li>
@@ -131,8 +129,7 @@ const NavBar = () => {
                         </nav>
                         <ul className="sidenav" id="mobile-demo">
                             <li ><Link to="/">Inicio</Link></li>
-                            <li ><Link to="/suppliers">Empresas</Link></li>
-                            <li ><Link to="/live">En vivo</Link></li>
+                            <li ><Link to="/suppliers">Productos</Link></li>
                             <li ><Link to="/faqs">Preguntas frecuentes</Link></li>
                             <li ><Link to="/howtobuy">¿Cómo comprar?</Link></li>
                             <li ><Link to="/aboutus">¿Quiénes Somos?</Link></li>

@@ -16,11 +16,13 @@ const Home = () => {
   const [companyImage, setConpanyImage] = useState(null)
 
   const imagesCompaniesMap = (companies) => {
-    const images = companies.map((company) =>
-      company.companyImage
-    )
-    console.log(images)
-    setConpanyImage(images)
+    if (companies !== null) {
+      const images = companies.map((company) =>
+        company.companyImage
+      )
+      console.log(images)
+      setConpanyImage(images)
+    }
   }
 
   useEffect(() => {
@@ -35,13 +37,13 @@ const Home = () => {
       <div>
         <h5 id="googleFont" className='productos'>Productos Destacados</h5>
       </div>
-      <SliderProducts />
+      <SliderProducts />{/*
       <div>
         <h5 id="googleFont" className='productos'>Empresas Expositoras</h5>
       </div>
       <div>
         {
-          !companyImage ?
+          !companyImage || companyImage.length === 0 ?
             <div className="preloader-wrapper active">
               <div className="spinner-layer spinner-red-only">
                 <div className="circle-clipper left">
@@ -70,7 +72,7 @@ const Home = () => {
               }}
             />
         }
-      </div>
+      </div>*/}
     </div>
   );
 };

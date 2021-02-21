@@ -14,11 +14,14 @@
   }
 
   #googleFont {
-  font-family: "Dancing Script", cursive;
-  text-shadow: 1px 1px hsla(0, 0%, 0%, 0.658);
+  font-family: "Lemonada", cursive;
+  color: rgb(74, 245, 58);
+  text-shadow: 2px 2px hsl(115, 100%, 20%);
   font-size: 3rem;
-  margin-top: 8rem;
-  margin-left: 1rem;
+  margin-top: 5rem;
+  margin-left: 10%;
+  min-height: 20rem;
+  display: inline-table;
 }
 
 #Dropdown_6{
