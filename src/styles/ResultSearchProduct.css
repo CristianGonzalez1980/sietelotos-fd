@@ -13,15 +13,22 @@
   text-decoration: none;
   }
 
-  #googleFont {
+  .googleFont {
   font-family: "Lemonada", cursive;
   color: rgb(74, 245, 58);
   text-shadow: 2px 2px hsl(115, 100%, 20%);
   font-size: 3rem;
+  margin-top: 1rem;
+  margin-left: 10%;
+  min-height: 5rem;
+  display: inline-table;
+}
+
+  .noResultado {
   margin-top: 5rem;
   margin-left: 10%;
+  margin-right: 10%;
   min-height: 20rem;
-  display: inline-table;
 }
 
 #Dropdown_6{

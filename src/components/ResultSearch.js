@@ -12,14 +12,14 @@ const ResultSearch = () => {
     const textoBusqueda = () => {
         if(products.length > 0){
             return (
-                <h2 id="googleFont">
+                <h2 className="googleFont">
                   Resultado de búsqueda para "{textsearch}" 
                 </h2>
             )
         }else{
           if(products.length === 0){
             return(
-              <h2 id="googleFont">
+              <h2 className="googleFont noResultado">
                 ¡No existen resultados para la búsqueda! 
               </h2>)
           }else{

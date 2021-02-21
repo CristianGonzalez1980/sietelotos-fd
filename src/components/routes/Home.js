@@ -35,7 +35,7 @@ const Home = () => {
     <div>
       <Banner />
       <div>
-        <h5 id="googleFont" className='productos'>Productos Destacados</h5>
+        <h5 id="googleFontHome" className='productos'>Productos Destacados</h5>
       </div>
       <SliderProducts />{/*
       <div>
