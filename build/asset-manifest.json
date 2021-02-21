@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.a343d8b2.chunk.css",
-    "main.js": "/static/js/main.9b08a3f1.chunk.js",
-    "main.js.map": "/static/js/main.9b08a3f1.chunk.js.map",
+    "main.css": "/static/css/main.9bd068fd.chunk.css",
+    "main.js": "/static/js/main.63024d7d.chunk.js",
+    "main.js.map": "/static/js/main.63024d7d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.245ca5e1.js",
     "runtime-main.js.map": "/static/js/runtime-main.245ca5e1.js.map",
     "static/js/2.2911961b.chunk.js": "/static/js/2.2911961b.chunk.js",
     "static/js/2.2911961b.chunk.js.map": "/static/js/2.2911961b.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.a343d8b2.chunk.css.map": "/static/css/main.a343d8b2.chunk.css.map",
+    "static/css/main.9bd068fd.chunk.css.map": "/static/css/main.9bd068fd.chunk.css.map",
     "static/js/2.2911961b.chunk.js.LICENSE.txt": "/static/js/2.2911961b.chunk.js.LICENSE.txt",
     "static/media/logoWhite.35039db7.png": "/static/media/logoWhite.35039db7.png",
     "static/media/PaginaNoEncontrada.css": "/static/media/sietelotosbkg.278003d5.png"
@@ -16,7 +16,7 @@
   "entrypoints": [
     "static/js/runtime-main.245ca5e1.js",
     "static/js/2.2911961b.chunk.js",
-    "static/css/main.a343d8b2.chunk.css",
-    "static/js/main.9b08a3f1.chunk.js"
+    "static/css/main.9bd068fd.chunk.css",
+    "static/js/main.63024d7d.chunk.js"
   ]
 }
