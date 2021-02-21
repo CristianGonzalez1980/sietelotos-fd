@@ -7,8 +7,10 @@
 }
 
 #botonLogin {
+  background-color: #ff7077  !important;
   color: white;
   margin-left: 43%;
+
 }
 
 #H5Register {
@@ -19,7 +21,7 @@
 }
 
 #linkRegister {
-  color: aliceblue;
+  color: #ff7077 ;
   margin-right: 0.5%;
 }
 

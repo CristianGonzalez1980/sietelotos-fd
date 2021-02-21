@@ -15,7 +15,7 @@
 .btn-small {
   text-decoration: none;
   color: #000;
-  background-color: #fff;
+  background-color: #ff7077;
   text-align: center;
   letter-spacing: 0.5px;
   -webkit-transition: background-color 0.2s ease-out;
@@ -27,7 +27,7 @@
 .dropdown-content li>a,
 .dropdown-content li>span {
  font-size:16px;
- color:#0d752d;
+ color:rgb(74, 245, 58);
  display:block;
  line-height:22px;
  padding:14px 16px
@@ -44,11 +44,13 @@
 .btn-large:focus,
 .btn-small:focus,
 .btn-floating:focus {
- background-color:#1f955e
+ color: #000;
+ background-color:rgb(74, 245, 58)
 }
 
 .btn:hover,
 .btn-large:hover,
 .btn-small:hover {
- background-color:#1f955e
+ color: #000;
+ background-color:rgb(74, 245, 58)
 }
