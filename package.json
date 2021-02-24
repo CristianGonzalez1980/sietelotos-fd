@@ -16,6 +16,7 @@
     "emailjs-com": "^2.6.3",
     "jquery": "^3.5.1",
     "materialize-css": "^1.0.0",
+    "mercadopago": "^1.5.5",
     "react": "^16.13.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^16.13.1",

@@ -46,13 +46,15 @@ const Login = () => {
     <div className="mycard">
       <div id="fondoTarjetaLogin" className="card auth-card input-field">
         <img alt="logo" className="logo-login" src={logo} />
-        <input
-          type="number"
-          id='inputLogin'
-          placeholder="DNI"
-          value={dni}
-          onChange={(e) => setdni(e.target.value)}
-        />
+        <div>
+          <input
+            type="number"
+            id='inputLogin'
+            placeholder="DNI"
+            value={dni}
+            onChange={(e) => setdni(e.target.value)}
+          />
+        </div>
         <button
           id="botonLogin"
           className="btn waves-effect waves-light #64b5f6 red darken-1"

@@ -1,14 +1,24 @@
-#imgCart {
-  width: 40%;
+#bigCart {
+  width: 14%;
 }
 
 #tdCart {
-  width: 25%;
+  width: 14%;
+  font-family: "Yatra One";
+  color: blueviolet;
+  text-shadow: 1px 1px hsla(0, 0%, 0%, 0.658);
+}
+
+#imgCart {
+  width: 50%;
 }
 
 #inptCartCant {
-  width: 20%;
+  width: 25%;
   text-align: center;
+  font-family: "Yatra One";
+  color: blueviolet;
+  text-shadow: 1px 1px hsla(0, 0%, 0%, 0.658);
 }
 
 #noHayElementos {
@@ -20,17 +30,51 @@
   display: inline-table;
 }
 
-button {
+#btn {
   cursor: pointer;
+  width: 10%;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: scale(5);
+}
+
+#btn:hover{
+  background-color: blueviolet;
 }
 
 .cart {
-  width: 80%;
+  width: 90%;
   padding-top: 2%;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 0%;
+  margin-left: 5%;
+  margin-right: 5%;
   padding-bottom: 1%;
+  border-radius: 2%;
+}
+
+.containerCart {
+  margin-bottom: 1%;  
+}
+
+.cityIcons {
+  align-items: center;
+  display: flex;
+}
+
+.delivery {
+  font-family: "Yatra One", cursive;
+  color: blueviolet;
+  text-shadow: 1px 1px hsla(0, 0%, 0%, 0.658);
+  font-size:xx-large;
+  text-align: right;
+}
+
+.deliveryIcon {
+  color: rgba(137, 43, 226, 0.637);
+  text-shadow: 1px 1px hsla(0, 0%, 0%, 0.658);
+}
+
+.send {
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 .centerField {
@@ -39,7 +83,23 @@ button {
 
 .rightField {
   text-align: right;
+  margin-right: 0%;
 }
+
+.row .col.s6, strong {
+  padding-left: 5%;
+  font-family: "Yatra One";
+  color: blueviolet;
+  text-shadow: 1px 1px hsla(0, 0%, 0%, 0.658);
+  width:45%;
+ }
+
+.leftField {
+  text-align: left;
+  margin-left: 5%;
+  margin-top: 1.6%;
+}
+
 
 td,
 th {
@@ -65,4 +125,10 @@ th {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  color:blueviolet;
+}
+
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:after {
+ background-color:blueviolet;
 }
