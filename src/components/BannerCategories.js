@@ -8,8 +8,9 @@ const BannerCategories = (props) => {
                 <select className="input-field" id="Category" form="bannerform" type="text" onChange={(e) => props.fx(e.target.value)} className="validate" value={props.val}>
                     <option value={null}>Seleccione una categoría...</option>
                     <option value="HOME">Inicio</option>
-                    <option value="SCHEDULE">Calendario de clases</option>
-                    <option value="CLASS">Clase en vivo</option>
+                    <option value="BACKGROUND">Background</option>
+{/*                     <option value="SCHEDULE">Calendario de clases</option>
+                    <option value="CLASS">Clase en vivo</option> */}
                     <option value="COURRIER">Correo</option>
                     <option value="PAYMENTMETHODS">Metodos de pago</option>
                 </select>

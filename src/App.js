@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, useContext } from 'react';
+import React, { createContext, useReducer, useContext, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './components/routes/Home.js'
 import Suppliers from './components/routes/Suppliers.js'
@@ -28,6 +28,7 @@ import Singin from './components/routes/Singin'
 import SinginAdmin from './components/routes/SinginAdmin'
 import Singup from './components/routes/Singup'
 import { reducer, initialState } from "./components/context/UserReducer";
+import { postearGetEntity } from './components/AdminPanel/FetchFunctions';
 
 export const userContext = createContext();
 
@@ -114,17 +115,31 @@ const Routing = () => {
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [imageBk, setImageBk] = useState(null)
+
+  function saveFirstImage(listImages) {
+    setImageBk(listImages[0].image)
+  };
+
+  useEffect(() => {
+    postearGetEntity({ entityClass: "banners/BACKGROUND", fx: saveFirstImage });
+  }, [])
+
   return (
-    <GlobalState>
-      <userContext.Provider value={{ state, dispatch }}>
-        <Router>
-          <NavBar />
-          <MarginTopBar />
-          <Routing />
-          <Footer />
-        </Router>
-      </userContext.Provider>
-    </GlobalState>
+    <div style={{
+      backgroundImage: `url(${imageBk})`
+    }}>
+      <GlobalState>
+        <userContext.Provider value={{ state, dispatch }}>
+          <Router>
+            <NavBar />
+            <MarginTopBar />
+            <Routing />
+            <Footer />
+          </Router>
+        </userContext.Provider>
+      </GlobalState>
+    </div>
   );
 }
 

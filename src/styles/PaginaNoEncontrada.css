@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Lemonada");
 @import url("https://fonts.googleapis.com/css?family=Caveat");
 
-body {
+/* body {
   background-color: #e8ece2;
   background-image: url("../images/sietelotosbkg.png");
-}
+} */
+
 #exclamation-triangle {
   color: rgb(255, 0, 0);
   text-shadow: 3px 3px hsl(115, 100%, 20%);

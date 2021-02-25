@@ -1,7 +1,7 @@
 //import { useHistory } from "react-router-dom";
 import M from 'materialize-css'
 
-const apiServer = "https://sietelotos.herokuapp.com" //"http://localhost:7000"
+const apiServer = "https://sietelotos.herokuapp.com"/* "http://localhost:7000" */
 
 const postearUpdateEntity = (props) => {
     const history = props.historyProp
