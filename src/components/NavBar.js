@@ -103,7 +103,7 @@ const NavBar = () => {
                     <div className="NavBar" style={{ backgroundColor: bkColor }}>
                         <div className="row">
                             <div className="col s4" >
-                                <img alt="logo" id='imgLogo' src={logo} />
+                            <Link to="/"><img alt="logo" id='imgLogo' src={logo}/></Link> 
                             </div>
                             <div className="col s4">
                                 <form className="form-inline" onSubmit={handleSubmit}>
@@ -133,20 +133,20 @@ const NavBar = () => {
                         <nav>
                             <div className="nav-wrapper" style={{ backgroundColor: bkColorWrapp }}>
                                 <a href="" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
-                                <ul className="left hide-on-med-and-down">
-                                    <li><Link className={Inicio ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setInicio(true)} onMouseLeave={() => setInicio(false)} to="/">Inicio</Link></li>
+                                <ul className="hide-on-med-and-down">
+{/*                                     <li><Link className={Inicio ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setInicio(true)} onMouseLeave={() => setInicio(false)} to="/">Inicio</Link></li> */}
                                     <li><Link className={Productos ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setProductos(true)} onMouseLeave={() => setProductos(false)} to="/suppliers">Productos</Link></li>
                                     <li><Link className={Preguntas ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setPreguntas(true)} onMouseLeave={() => setPreguntas(false)} to="/faqs">Preguntas frecuentes</Link></li>
                                     <li><Link className={CómoComprar ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setCómoComprar(true)} onMouseLeave={() => setCómoComprar(false)} to="/howtobuy">¿Cómo comprar?</Link></li>
                                     <li><Link className={QuiénesSomos ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setQuiénesSomos(true)} onMouseLeave={() => setQuiénesSomos(false)} to="/aboutus">¿Quiénes somos?</Link></li>
                                     <li><Link className={Contacto ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setContacto(true)} onMouseLeave={() => setContacto(false)} to="/contact">Contacto</Link></li>
-                                    <li>{renderPanelAdmin()}</li>
-                                    <li>{renderButton()}</li>
+                                    <li className="right" >{renderPanelAdmin()}</li>
+                                    <li className="right">{renderButton()}</li>
                                 </ul>
                             </div>
                         </nav>
                         <ul className="sidenav" id="mobile-demo" style={{ backgroundColor: bkColorSide }}>
-                            <li ><Link to="/">Inicio</Link></li>
+{/*                             <li ><Link to="/">Inicio</Link></li> */}
                             <li ><Link to="/suppliers">Productos</Link></li>
                             <li ><Link to="/faqs">Preguntas frecuentes</Link></li>
                             <li ><Link to="/howtobuy">¿Cómo comprar?</Link></li>
