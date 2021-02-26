@@ -1,0 +1,11 @@
+#butonSubmitColorPicker {
+margin-top: 3rem;
+margin-right: 5rem;
+margin-left: -5rem;
+width: 50%;
+}
+
+:root {
+    --primary: #cf22c6;
+}
+

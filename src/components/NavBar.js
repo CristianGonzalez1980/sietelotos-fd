@@ -1,10 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Link, useHistory } from 'react-router-dom'
 import logo from '../images/logoWhite.png'
 import "../styles/Navbar.css"
 import M from 'materialize-css'
 import ShopContext from './context/shop-context'
 import { userContext } from "../App"
+import { postearGetEntity } from "./AdminPanel/FetchFunctions";
 
 document.addEventListener('DOMContentLoaded', function () {
     var elems = document.querySelectorAll('.sidenav');
@@ -22,6 +23,21 @@ const NavBar = () => {
     const [CómoComprar, setCómoComprar] = useState(false)
     const [QuiénesSomos, setQuiénesSomos] = useState(false)
     const [Contacto, setContacto] = useState(false)
+    const [bkColor, setBkColor] = useState(null/* '#b80090' */)
+    const [bkColorSide, setBkColorSide] = useState(null/* '#b80090' */)
+    const [bkColorWrapp, setBkColorWrapp] = useState(null/* '#b80090' */)
+
+    const setBackGroundColor = (data) => {
+        setBkColor(data[0].backgroundColor)
+        setBkColorSide(data[0].backgroundColorSide)
+        setBkColorWrapp(data[0].backgroundColorWrapp)
+    }
+
+    useEffect(() => {
+        if (!bkColor) {
+            postearGetEntity({ entityClass: "settings", fx: setBackGroundColor })
+        }
+    }, []);
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -40,7 +56,7 @@ const NavBar = () => {
                     id="botonSesion"
                     className="btn #c62828 red darken-3"
                     onClick={() => {
-                        let username=localStorage.getItem('nombre')
+                        let username = localStorage.getItem('nombre')
                         localStorage.clear();
                         dispatch({ type: "CLEAR" });
                         M.toast({
@@ -84,8 +100,7 @@ const NavBar = () => {
         <ShopContext.Consumer>
             {context => (
                 <React.Fragment>
-
-                    <div className="NavBar">
+                    <div className="NavBar" style={{ backgroundColor: bkColor }}>
                         <div className="row">
                             <div className="col s4" >
                                 <img alt="logo" id='imgLogo' src={logo} />
@@ -100,7 +115,7 @@ const NavBar = () => {
                                     <i className="small material-icons left" id="iconSearch" onClick={() => setTextSearch("")}>search</i>
                                 </Link>
                             </div>
-{/*                             <div className="col s1">
+                            {/*                             <div className="col s1">
                                 {renderPanelAdmin()}
                             </div> */}
                             <div className="col s2">
@@ -111,12 +126,12 @@ const NavBar = () => {
                                     <i className="small material-icons left" id="iconCart">shopping_cart</i>
                                 </Link>
                             </div>
-{/*                             <div id="colBotonSesion" className="col s2">
+                            {/*                             <div id="colBotonSesion" className="col s2">
                                 {renderButton()}
                             </div> */}
                         </div>
                         <nav>
-                            <div className="nav-wrapper">
+                            <div className="nav-wrapper" style={{ backgroundColor: bkColorWrapp }}>
                                 <a href="" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
                                 <ul className="left hide-on-med-and-down">
                                     <li><Link className={Inicio ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setInicio(true)} onMouseLeave={() => setInicio(false)} to="/">Inicio</Link></li>
@@ -130,7 +145,7 @@ const NavBar = () => {
                                 </ul>
                             </div>
                         </nav>
-                        <ul className="sidenav" id="mobile-demo">
+                        <ul className="sidenav" id="mobile-demo" style={{ backgroundColor: bkColorSide }}>
                             <li ><Link to="/">Inicio</Link></li>
                             <li ><Link to="/suppliers">Productos</Link></li>
                             <li ><Link to="/faqs">Preguntas frecuentes</Link></li>

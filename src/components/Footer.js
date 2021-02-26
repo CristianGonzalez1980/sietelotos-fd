@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect  } from 'react';
 import { Link } from 'react-router-dom'
 import { SocialIcon } from 'react-social-icons';
 import '../styles/Footer.css'
+import { postearGetEntity } from "./AdminPanel/FetchFunctions";
 
 const Footer = () => {
+
+  const [bkColor, setBkColor] = useState(null/* '#b80090' */)
+
+  const setBackGroundColor = (data) => {
+    setBkColor(data[0].backgroundColorFooter)
+  }
+
+  useEffect(() => {
+    if (!bkColor) {
+      postearGetEntity({ entityClass: "settings", fx: setBackGroundColor })
+    }
+  }, []);
+
   return (
-    <footer className="page-footer">
+    <footer className="page-footer" style={{ backgroundColor: bkColor }}>
       <div>
         <div className="row">
           <div className="col s4">

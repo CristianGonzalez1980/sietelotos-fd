@@ -1,5 +1,5 @@
 .NavBar {
-  background-color: #b80090;
+/*   background-color: #b80090; */
   width: 100%;
   top: 0px;
   z-index: 1040;
@@ -14,7 +14,7 @@ box-sizing: inherit;
 
 nav {
   color:#fff;
-  background-color:#b80090;
+/*   background-color:#b80090; */
   width:100%;
   height:56px;
   line-height:56px
@@ -105,7 +105,7 @@ nav {
 
  .sidenav li > a {
   color: rgb(255, 255, 255);
-  background-color: #b80090;
+/*   background-color: #b80090; */
 }
 
 .sidenav {

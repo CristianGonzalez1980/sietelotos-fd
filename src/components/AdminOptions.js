@@ -41,7 +41,8 @@ const AdminOptions = () => {
                     allButtons: [
                         { icon: "store_mall_directory", name: "Proveedores", buttons: [{ route: "/admin/agregarproveedor", name: "Agregar Proveedor" }, { route: "/admin/modificarproveedor", name: "Modificar Proveedor" }, { route: "/admin/borrarproveedor", name: "Eliminar Proveedor" }] },
                         { icon: "personal_video", name: "Productos", buttons: [{ route: "/admin/agregarproducto", name: "Agregar Producto" }, { route: "/admin/modificarproducto", name: "Modificar Producto" }, { route: "/admin/borrarproducto", name: "Eliminar Producto" }] },
-                        { icon: "local_movies", name: "Banners", buttons: [{ route: "/admin/agregarbanner", name: "Agregar Banner" }, { route: "/admin/borrarbanner", name: "Eliminar Banner" }] }
+                        { icon: "local_movies", name: "Imagenes", buttons: [{ route: "/admin/agregarbanner", name: "Agregar Imagen" }, { route: "/admin/borrarbanner", name: "Eliminar Imagen" }] },
+                        { icon: "local_movies", name: "Aspecto", buttons: [{ route: "/admin/configuraraspecto", name: "Configurar Aspecto" }] }
                     ]
                 })}
             </ul>

@@ -13,6 +13,7 @@ import Admin from './components/routes/Admin.js';
 import NavBar from './components/NavBar'
 import MarginTopBar from './components/MarginTopBar'
 import Footer from './components/Footer'
+import PickedColor from './components/AdminPanel/PickedColor'
 import AddBanner from './components/AdminPanel/AddBanner'
 import AddProveedor from './components/AdminPanel/AddProveedor'
 import DeleteBanner from './components/AdminPanel/DeleteBanner'
@@ -90,6 +91,9 @@ const Routing = () => {
         </Route>
         <Route path="/admin/borrarbanner" component={state === "admin" ? DeleteBanner : PageNotFound}>
           {state === "admin" ? <DeleteBanner /> : <PageNotFound />}
+        </Route>
+        <Route path="/admin/configuraraspecto" component={state === "admin" ? PickedColor : PageNotFound}>
+          {state === "admin" ? <PickedColor /> : <PageNotFound />}
         </Route>
         <Route path="/resultsearch/:textsearch" component={ResultSearch}>
           <ResultSearch />
