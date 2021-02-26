@@ -119,10 +119,10 @@ const AddProveedor = (props) => {
             </form>
             <div className="row">
               <div className="col s12">
-                <a onClick={() => {
+                <button onClick={() => {
                   agregarProveedor();
                   subirBanner();
-                }} className="waves-effect waves-light red lighten-2 btn-large" id="butonSubmit">Agregar proveedor</a>
+                }} className="waves-effect waves-light red lighten-2 btn-large" id="butonSubmit">Agregar proveedor</button>
               </div>
             </div>
           </form>

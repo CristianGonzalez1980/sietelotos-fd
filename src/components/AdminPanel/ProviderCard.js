@@ -15,9 +15,9 @@ const ProviderCard = (props) => {
           <button onClick={() => { funcionD(provider) }} className="btn-floating halfway-fab waves-effect waves-light red"><i className="material-icons">{iconFx}</i></button>
         </div>
         <div className="card-content">
-          <a href={"http://" + provider.facebook} target="_blank"><p>Facebook</p></a>
-          <a href={"http://" + provider.instagram} target="_blank"><p>Instagram</p></a>
-          <a href={"http://" + provider.web} target="_blank"><p>Web</p></a>
+          <a href={"http://" + provider.facebook} target="_blank" rel="noopener noreferrer"><p>Facebook</p></a>
+          <a href={"http://" + provider.instagram} target="_blank" rel="noopener noreferrer" ><p>Instagram</p></a>
+          <a href={"http://" + provider.web} target="_blank" rel="noopener noreferrer"><p>Web</p></a>
         </div>
       </div>
     </div>

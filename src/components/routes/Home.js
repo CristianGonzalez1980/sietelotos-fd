@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react"
 import M from 'materialize-css'
 import '../../styles/Home.css'
-import { Carousel } from "react-materialize"
+/* import { Carousel } from "react-materialize" */
 import SliderProducts from '../SliderProducts'
 import Banner from '../Banner'
 import { postearGetEntity } from "../AdminPanel/FetchFunctions";

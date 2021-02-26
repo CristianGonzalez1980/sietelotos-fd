@@ -1,7 +1,7 @@
 #butonSubmitColorPicker {
-margin-top: 3rem;
-margin-right: 5rem;
-margin-left: -5rem;
+margin-top: 1rem;
+margin-bottom: 3rem;
+margin-left: 3rem;
 width: 50%;
 }
 
@@ -9,3 +9,56 @@ width: 50%;
     --primary: #cf22c6;
 }
 
+.result_output {
+/*     width: 30px;
+    height: 30px; */
+    float: none;
+/*     border-radius: 40px; */
+    margin-left: 160px;
+/*     box-shadow: 1px 1px 4px #818282; */
+  }
+
+  .unit_section {
+/*     width: 30px;
+    height: 30px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    color: #555555;
+    float: left;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px #bfbfbf;
+    font-size: 20px; */
+    margin-left: -40px;
+}
+
+input:not([type]), input[type="text"]:not(.browser-default), input[type="password"]:not(.browser-default), input[type="email"]:not(.browser-default), input[type="url"]:not(.browser-default), input[type="time"]:not(.browser-default), input[type="date"]:not(.browser-default), input[type="datetime"]:not(.browser-default), input[type="datetime-local"]:not(.browser-default), input[type="tel"]:not(.browser-default), input[type="number"]:not(.browser-default), input[type="search"]:not(.browser-default), textarea.materialize-textarea {
+/*     background-color: transparent;
+    border: none;
+        border-bottom-color: currentcolor;
+        border-bottom-style: none;
+        border-bottom-width: medium;
+    border-bottom: 1px solid #9e9e9e;
+    border-radius: 0;
+    outline: none; */
+    height: 2rem;
+/*     width: 100%;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+    padding: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-transition: border .3s, -webkit-box-shadow .3s;
+    transition: border .3s, -webkit-box-shadow .3s;
+    transition: box-shadow .3s, border .3s;
+    transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s; */
+}
+
+.picker_switch li {
+    text-align: center;
+    margin-left: 2px;
+    margin-top: -4px;
+  }

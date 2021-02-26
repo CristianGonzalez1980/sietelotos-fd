@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 const AddBanner = () => {
   const history = useHistory();
   const [url, setUrl] = useState(null);
-  const [urlTemp, setUrlTemp] = useState(null);
+/*   const [urlTemp, setUrlTemp] = useState(null); */
   const [image, setimage] = useState(null)
   const [category, setcategory] = useState(null)
   const [postear, setpostear] = useState(false)

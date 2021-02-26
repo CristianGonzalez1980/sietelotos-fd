@@ -4,7 +4,7 @@ import ListOfProductToDelete from './ListOfProductToDelete'
 import AdminOptions from '../AdminOptions';
 import CardProviderwFx from './CardProviderwFx';
 import AdminProveedorSearchBar from '../AdminProveedorSearchBar';
-import { postearDeleteEntity, postearGetEntity } from '../AdminPanel/FetchFunctions'
+import { postearGetEntity } from '../AdminPanel/FetchFunctions'
 
 const DeleteProducto = () => {
   const [companies, setCompanies] = useState(null)

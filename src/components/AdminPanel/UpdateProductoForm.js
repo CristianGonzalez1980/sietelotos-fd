@@ -94,7 +94,7 @@ const UpdateProductoForm = (props) => {
             <div className="col s1" id='colCard'>
               <div className="card" id='cardDeleteUP'>
                 <div className="card-image" id="imageUP">
-                  <img src={elem} />
+                  <img alt="productImage" src={elem} />
                   <a onClick={() => {
                     url.length === 1 ?
                       nosePuedeEliminarImagen()
