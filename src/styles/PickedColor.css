@@ -4,17 +4,18 @@ margin-bottom: 3rem;
 margin-left: 3rem;
 width: 50%;
 }
-
+/*
 :root {
     --primary: #cf22c6;
 }
-
+*/
 .result_output {
 /*     width: 30px;
     height: 30px; */
     float: none;
+ /*    margin-right: -22px; */
 /*     border-radius: 40px; */
-    margin-left: 160px;
+     margin-left: 160px; 
 /*     box-shadow: 1px 1px 4px #818282; */
   }
 

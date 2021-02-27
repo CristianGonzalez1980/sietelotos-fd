@@ -27,7 +27,7 @@ const ProveedorConProductos = (props) => {
 
       const result = res.map((product) => {
         return (
-          <ProductCard product={product} />
+          <ProductCard key={product.id} product={product} />
         )
       })
 
@@ -73,14 +73,14 @@ const ProveedorConProductos = (props) => {
       )
     }
   }
-  console.log(company.companyBanner)
+
   let styles = {
     backgroundImage: `url(${company.companyBanner})`,
     backgroundSize: '100%',
     minHeight: " 14.9rem",
     backgroundRepeat: "no-repeat"
   }
-  console.log({ styles })
+
   return (
     <div>
       {

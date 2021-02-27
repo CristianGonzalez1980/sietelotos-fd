@@ -64,20 +64,20 @@ const Footer = () => {
       <div className="footer">
         <div className="containerF" id="contFooter">
           <div className="row">
-            <div className="col s3"><a href='https://www.facebook.com/Siete-Lotos-Artesanias-120194046559599'><SocialIcon className="SocialIcon" network="facebook" bgColor="#ffffff" /></a></div>
-            <div className="col s3"><a href='http://instagram.com/Siete-Lotos-Artesanias-120194046559599'><SocialIcon className="SocialIcon" network="instagram" bgColor="#ffffff" /></a></div>
-            <div className="col s3"><Link id="linkList" to="/contact"><SocialIcon className="SocialIcon" network="email" bgColor="#ffffff" /></Link></div>
-            <div className="col s3"><a href='https://wa.me/5491123869642'><SocialIcon className="SocialIcon" network="whatsapp" bgColor="#ffffff" /></a></div>
+            <div className="col s3"><SocialIcon url="https://www.facebook.com/Siete-Lotos-Artesanias-120194046559599" className="SocialIcon" network="facebook" bgColor="#ffffff" /></div>
+            <div className="col s3"><SocialIcon url="http://instagram.com/Siete-Lotos-Artesanias-120194046559599" className="SocialIcon" network="instagram" bgColor="#ffffff" /></div>
+            <div className="col s3">{/* <Link id="linkList" to="/contact">*/}< SocialIcon id="linkList" url="/contact" className="SocialIcon" network="email" bgColor="#ffffff" />{/* </Link> */}</div>
+            <div className="col s3"><SocialIcon url="https://wa.me/5491123869642" className="SocialIcon" network="whatsapp" bgColor="#ffffff" /></div>
           </div>
           <div className='row'>
             <div className='col s6'>
               © 2021 Copyright Siete Lotos Artesanias
             </div>
             <div className='col s6'>
-              <div class="float-btn float-right float-bottom">
+              <div className="float-btn float-right float-bottom">
                 <span tabIndex="0" data-toggle="tooltip" data-placement="top" data-trigger="hover" title="Estamos en WhatsApp. Consultanos!">
-                  <a id="float-btn-action" class="float-fab float-btn-large fl-circle" href="https://api.whatsapp.com/send?phone=5491123869642&text=Hola!" target="_blank">
-                    <i class="fa fa-whatsapp">
+                  <a id="float-btn-action" className="float-fab float-btn-large fl-circle" href="https://api.whatsapp.com/send?phone=5491123869642&text=Hola!" target="_blank">
+                    <i className="fa fa-whatsapp">
                     </i>
                   </a>
                 </span>

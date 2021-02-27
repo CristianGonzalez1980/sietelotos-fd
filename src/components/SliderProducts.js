@@ -42,7 +42,7 @@ const SliderProducts = () => {
       let index = 0
       const placenment = ["center", "right", "left"]
       const productlist = products.map((product) =>
-        <ShopContext.Consumer>
+        <ShopContext.Consumer key={product.id}>
           {context => (
             <React.Fragment>
               <Slide image={<img className="prodImg" alt={product.itemName} src={product.images[0]} />}>

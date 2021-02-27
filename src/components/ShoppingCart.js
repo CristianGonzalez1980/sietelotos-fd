@@ -40,7 +40,7 @@ export const volumenTotal = (products) => {
 const ShoppingCart = () => {
   /**USO EL CONTEXTO DE SHOPCONTEXT */
   const context = useContext(ShopContext);
-  const [codigoPostal, setCodigoPostal] = useState(null)
+  const [codigoPostal, setCodigoPostal] = useState('')
   const [sendMethodName, setSendMethodName] = useState(null)
   const [sendMethodCost, setSendMethodCost] = useState(null)
   const [courrierOptionsList, setCourrierOptionsList] = useState([])
@@ -148,16 +148,15 @@ const ShoppingCart = () => {
 
     const courrierItemList = () => {
       const list = courrierOptionsList.map((courrier) => {
-        console.log(courrier.cost)
+        console.log(courrier.shipping_method_id)
         return (
-          <p>
+          <p key={courrier.shipping_method_id}>
             <CourrierCard name={courrier.name} cost={courrier.cost} fx={setSendMethodName} fx2={setSendMethodCost} />
           </p>
         )
       })
       return (
         <form action="#" id="currieroption">
-          {console.log(list)}
           {list}
           {/*           <p id="currieroption">
             <label>
@@ -200,7 +199,8 @@ const ShoppingCart = () => {
                     </tr>
                   </thead>
                   {context.cart.map(cartItem => (
-                    <tbody>
+                    <tbody key={cartItem.id}>
+                      <tr>
                       <td id="tdCart">{cartItem.itemName}</td>
                       <td id="bigCart"><img id="imgCart" alt={cartItem.itemName} src={cartItem.images[0]} /></td>
                       <td id="tdCart">$ {cartItem.itemPrice}</td>
@@ -214,9 +214,10 @@ const ShoppingCart = () => {
                       <td id="tdCart">$ {cartItem.itemPrice * cartItem.quantity}</td>
                       <td id="tdCart">
                         <button onClick={context.deleteProductFromCart.bind(this, cartItem.id)} className="btn purple lighten-2">
-                          <i class="material-icons">delete</i>
+                          <i className="material-icons">delete</i>
                         </button>
                       </td>
+                      </tr>
                     </tbody>
                   ))}
                 </table>

@@ -53,7 +53,7 @@ const PickedColor = () => {
                     "backgroundColorSide": myColorSide,
                     "backgroundColorWrapp": myColorWrapp
                 }
-            })
+            });
         }
     };
 
@@ -61,13 +61,13 @@ const PickedColor = () => {
         <div className='col'>
             <div className="row">
                 <AdminOptions />
-                <div className='col s4 left'>
+                <div className='col s4 left' style={{ marginTop:10 }} >
                     <ColorSelector pallet={coustomPickerData(`NAVBAR -Actual:${myColor}`)} selectedColor={pickedColor} />
                     <button onClick={(e) => {
                         colorSetUp();
                     }} className="waves-effect waves-light red lighten-2 btn-large colorPicker" id="butonSubmitColorPicker">Cambiar Color</button>
                 </div>
-                <div className='col s4 left'>
+                <div className='col s4 left' style={{ marginTop:10 }} >
                     <ColorSelector pallet={coustomPickerData(`FOOTER -Actual:${myColorFooter}`)} selectedColor={pickedColorFooter} />
                     <button onClick={(e) => {
                         colorSetUp();

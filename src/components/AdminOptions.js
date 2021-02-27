@@ -17,7 +17,7 @@ const AdminOptions = () => {
         const list = buttonsGroup.map((button) => {
             const links = button.buttons.map((buttonLink) => {
                 return (
-                    <Link id="fontSizeAdmin" className="waves-effect waves-light red lighten-2 btn-large" to={buttonLink.route} >{buttonLink.name}</Link>
+                    <Link key={buttonLink.name} id="fontSizeAdmin" className="waves-effect waves-light red lighten-2 btn-large" to={buttonLink.route} >{buttonLink.name}</Link>
                 )
             })
             return (

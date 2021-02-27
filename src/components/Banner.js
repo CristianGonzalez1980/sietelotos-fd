@@ -30,7 +30,7 @@ const Banner = () => {
     } else {
       const list = banners.map((banner) => {
         return (
-          <Slide image={<img alt="" id="bannerHome" src={banner.image} />}>
+          <Slide key={banner.id} image={<img alt="" id="bannerHome" src={banner.image} />}>
             <Caption placement="center">
             </Caption>
           </Slide>

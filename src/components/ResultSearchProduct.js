@@ -22,7 +22,7 @@ const ResultSearchProduct = (props) => {
             <Dropdown
                 id="Dropdown_6"
                 options={{
-                    alignment: 'center',
+                    alignment: 'left',
                     autoTrigger: true,
                     closeOnClick: true,
                     constrainWidth: true,
