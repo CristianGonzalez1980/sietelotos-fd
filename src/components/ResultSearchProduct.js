@@ -36,7 +36,7 @@ const ResultSearchProduct = (props) => {
                     onOpenStart: null,
                     outDuration: 250
                 }}
-                trigger={<Button node="button">Ordenar por:</Button>}>
+                trigger={<Button node="button">{criteria}</Button>}>
                 <button href="#" className="link-button" onClick={() => ordenarPrecioAsc(toOrder)}>Menor Precio</button>
                 <button href="#" className="link-button" onClick={() => ordenarPrecioDesc(toOrder)}>Mayor Precio</button>
                 <Divider />
@@ -120,7 +120,7 @@ const ResultSearchProduct = (props) => {
       */
             const result = toOrder.map((product) => {
                 return (
-                    <ProductCard product={product} />
+                    <ProductCard key={product.id} product={product} />
                 )
             }
             )
@@ -139,8 +139,8 @@ const ResultSearchProduct = (props) => {
             <div>
                 <div>
                     <div className="row">
-                        <div className="col s2">{orderButton(products)}</div>
-                        <div id="criteriasel" className="col s4"><h6>{criteria}</h6></div>
+                        <div id="criteriasel" className="col s3"><h6>ORDENAR POR:</h6></div>
+                        <div className="col s7s">{orderButton(products)}</div>
                     </div>
                 </div>
                 <div className='row'>
