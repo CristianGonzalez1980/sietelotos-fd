@@ -1,5 +1,5 @@
 .a {
-  color: burlywood ;
+  color: black/*  burlywood */ ;
 }
 
 @media only screen and (max-width: 600px) {
@@ -31,13 +31,13 @@
 } */
 
 #linkList {
-  color: burlywood  !important;
+  color: black/*  burlywood  */ !important;
 }
 
 .page-footer {
   padding-top: 20px;
   color: #fff;
-/*   background-color: #b80090; */
+  background-color: #ffffff00; 
   min-height: 28rem;
 }
 /*

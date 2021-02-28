@@ -15,7 +15,8 @@ nav {
   color:#fff;
   width:100%;
   height:56px;
-  line-height:56px
+  line-height:56px;
+  background-color: #ffffff00;
  }
 
 .row {
@@ -86,14 +87,14 @@ nav {
   margin-left: -3%;
 }
 
-#usuario {
+/* #usuario {
   font-size: 30px;
-  /*font-family: "Lemonada";*/
+  font-family: "Lemonada";
   color: burlywood ;
-/*   margin-top: 50px; */
+   margin-top: 50px; 
   font-family: "Yatra One", cursive;
   text-shadow: 1px 1px hsla(0, 0%, 0%, 0.658);
-}
+} */
 
 [type="search"] {
   -webkit-appearance:textfield;
@@ -106,5 +107,5 @@ nav {
 }
 
 .sidenav {
-  background-color: #d62234;
+  background-color: #ffffff00;
 }

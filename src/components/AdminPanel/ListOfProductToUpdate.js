@@ -1,6 +1,5 @@
 import React, { useState, useEffect/*, useRef*/ } from 'react'
 import UpdateProductoForm from './UpdateProductoForm'
-import '../../styles/ListOfProductToUpdate.css'
 import AdminProductSearchBar from '../AdminProductSearchBar'
 import CardProductwFx from './CardProductwFx';
 import { postearGetEntity } from '../AdminPanel/FetchFunctions';

@@ -1,7 +1,7 @@
 #butonSubmitColorPicker {
 margin-top: 1rem;
 margin-bottom: 3rem;
-margin-left: 3rem;
+margin-left: 10rem;
 width: 50%;
 }
 /*
@@ -62,4 +62,10 @@ input:not([type]), input[type="text"]:not(.browser-default), input[type="passwor
     text-align: center;
     margin-left: 2px;
     margin-top: -4px;
-  }
+}
+
+.circle {
+    margin-top: 3rem;
+    margin-left: 8rem;
+  color: rgba(240, 248, 255, 0);
+}
