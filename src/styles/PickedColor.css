@@ -12,7 +12,7 @@ width: 50%;
 .result_output {
 /*     width: 30px;
     height: 30px; */
-    float: none;
+    float:unset;
  /*    margin-right: -22px; */
 /*     border-radius: 40px; */
      margin-left: 160px; 
@@ -65,7 +65,23 @@ input:not([type]), input[type="text"]:not(.browser-default), input[type="passwor
 }
 
 .circle {
-    margin-top: 3rem;
-    margin-left: 8rem;
+  margin-top: 0.5rem;
+  margin-left: 6rem;
   color: rgba(240, 248, 255, 0);
+}
+
+.circleContent {
+    border: 1px solid #e9e9e98f;
+    background-color: rgba(255, 255, 255, 0.11);
+    margin-top: 3rem;
+    border-radius: 7%;
+}
+
+.light-theme{
+width: 310px;
+height: 0px;
+background-color: rgba(255, 255, 255, 0.11);
+border: 1px solid #e9e9e98f;
+border-radius: 2%;
+
 }

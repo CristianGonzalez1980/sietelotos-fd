@@ -44,9 +44,9 @@ height: 1.5rem;
 
     const selectedColorButton = (color) => {
         return (
-            <div>
-                <span>Color Actual: {color} </span>
-                <span className="circle" style={{ backgroundColor: color, height: 30, width: 30, display: 'inline-block' }} ></span>
+            <div className="circleContent" style={{ width: 310, display: 'inline-block' }}>
+                <span style={{ fontFamily: 'Helvetica', marginLeft: 8 }}>Color Actual: {color} </span>
+                <span className="circle" style={{ backgroundColor: color, height: 27, width: 27, display: 'inline-block' }} ></span>
             </div>)
     };
 
