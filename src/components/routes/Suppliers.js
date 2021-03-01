@@ -41,16 +41,16 @@ const Suppliers = () => {
       {
         !companies || companies.length === 0 ?
           <div>
-            <div class="preloader-wrapper big active">
-              <div class="spinner-layer spinner-blue">
-                <div class="circle-clipper left">
-                  <div class="circle"></div>
+            <div className="preloader-wrapper big active">
+              <div className="spinner-layer spinner-blue">
+                <div className="circle-clipper left">
+                  <div className="circle"></div>
                 </div>
-                <div class="gap-patch">
-                  <div class="circle"></div>
+                <div className="gap-patch">
+                  <div className="circle"></div>
                 </div>
-                <div class="circle-clipper right">
-                  <div class="circle"></div>
+                <div className="circle-clipper right">
+                  <div className="circle"></div>
                 </div>
               </div>
             </div>

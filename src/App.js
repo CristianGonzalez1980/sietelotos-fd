@@ -30,6 +30,7 @@ import SinginAdmin from './components/routes/SinginAdmin'
 import Singup from './components/routes/Singup'
 import { reducer, initialState } from "./components/context/UserReducer";
 import { postearGetEntity } from './components/AdminPanel/FetchFunctions';
+import ProductDetail from './components/AdminPanel/ProdcutDetail.js';
 
 export const userContext = createContext();
 
@@ -109,6 +110,8 @@ const Routing = () => {
         <Route path="/register" component={Singup}>
           <Singup />
         </Route>
+        <Route exact path="/productdetail/:value"  render={(props) =>
+          <ProductDetail value={props.match.params.value} /> } />
         <Route component={PageNotFound} />
       </Switch>
     </div>

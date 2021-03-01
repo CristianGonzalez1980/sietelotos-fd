@@ -36,7 +36,7 @@ const ProveedorConProductos = (props) => {
         let list = []
         for (let index = 0; index < paginas; index++) {
           list.push(
-            <li className={page === index ? "active" : "waves-effect"}>
+            <li key={index} className={page === index ? "active" : "waves-effect"}>
               <a onClick={() => { setPage(index) }}>{index + 1}</a>
             </li>
           )
