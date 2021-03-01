@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../styles/Singin.css";
 import { Link, useHistory } from "react-router-dom";
 import M from "materialize-css";
 import logo from "../../images/logoWhite.png"
+import { postearGetEntity } from "../AdminPanel/FetchFunctions";
 
 const Singup = () => {
   const history = useHistory();
@@ -47,42 +48,56 @@ const Singup = () => {
     uploadFiedls();
   };
 
+  const [bkColor, setBkColor] = useState(null)
+
+  const setBackGroundColor = (data) => {
+    setBkColor(data[0].backgroundColorCardLogin)
+  }
+
+  useEffect(() => {
+    if (!bkColor) {
+      postearGetEntity({ entityClass: "settings", fx: setBackGroundColor })
+    }
+  }, []);
+
   return (
     <div className="mycard">
-      <div id="fondoTarjetaLogin" className="card auth-card input-field">
-        <img alt='logo' className="logo-login" src={logo} />
-        <input
-          type="text"
-          placeholder="Nombre"
-          id='inputLogin'
-          value={nombre}
-          onChange={(e) => setnombre(e.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="Apellido"
-          id='inputLogin'
-          value={apellido}
-          onChange={(e) => setapellido(e.target.value)}
-        />
-        <input
-          type="number"
-          placeholder="DNI"
-          id='inputLogin'
-          value={dni}
-          onChange={(e) => setdni(e.target.value)}
-        />
-        <button
-          id="botonLogin"
-          className="btn waves-effect waves-light #64b5f6 red darken-1"
-          onClick={() => PostData()}
-        >
-          Registrar
+      {bkColor === null ? <div></div>
+        :
+        <div id="fondoTarjetaLogin" style={{ backgroundColor: bkColor }} className="card auth-card input-field">
+          <img alt='logo' className="logo-login" src={logo} />
+          <input
+            type="text"
+            placeholder="Nombre"
+            id='inputLogin'
+            value={nombre}
+            onChange={(e) => setnombre(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Apellido"
+            id='inputLogin'
+            value={apellido}
+            onChange={(e) => setapellido(e.target.value)}
+          />
+          <input
+            type="number"
+            placeholder="DNI"
+            id='inputLogin'
+            value={dni}
+            onChange={(e) => setdni(e.target.value)}
+          />
+          <button
+            id="botonLogin"
+            className="btn waves-effect waves-light #64b5f6 red darken-1"
+            onClick={() => PostData()}
+          >
+            Registrar
         </button>
-        <h5 id="H5Register">
-          <Link id="linkRegister" to="/login">Ya estas registrado?</Link>
-        </h5>
-      </div>
+          <h5 id="H5Register">
+            <Link id="linkRegister" to="/login">Ya estas registrado?</Link>
+          </h5>
+        </div>}
     </div>
   );
 };

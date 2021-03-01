@@ -21,7 +21,7 @@ const AdminOptions = () => {
                 )
             })
             return (
-                <li>
+                <li key={button.name} >
                     <div id="fontSizeAdmin" className="collapsible-header"><i className="material-icons">{button.icon}</i>{button.name}</div>
                     <div id="fontSizeAdmin" className="collapsible-body">
                         {links}

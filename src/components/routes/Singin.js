@@ -1,10 +1,11 @@
-import React, { useState, /*useEffect, */useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { userContext } from "../../App"
 import "../../styles/Singin.css";
 import M from "materialize-css";
 import logo from "../../images/logoWhite.png"
 import axios from "axios";
+import { postearGetEntity } from "../AdminPanel/FetchFunctions";
 
 const Login = () => {
   const history = useHistory();
@@ -42,32 +43,46 @@ const Login = () => {
     }
   };
 
+  const [bkColor, setBkColor] = useState(null)
+
+  const setBackGroundColor = (data) => {
+    setBkColor(data[0].backgroundColorCardLogin)
+  }
+
+  useEffect(() => {
+    if (!bkColor) {
+      postearGetEntity({ entityClass: "settings", fx: setBackGroundColor })
+    }
+  }, []);
+
   return (
     <div className="mycard">
-      <div id="fondoTarjetaLogin" className="card auth-card input-field">
-        <img alt="logo" className="logo-login" src={logo} />
-        <div>
-          <input
-            type="number"
-            id='inputLogin'
-            placeholder="DNI"
-            value={dni}
-            onChange={(e) => setdni(e.target.value)}
-          />
-        </div>
-        <button
-          id="botonLogin"
-          className="btn waves-effect waves-light #64b5f6 red darken-1"
-          onClick={() => PostData()}
-        >
-          Ingresar
+      {bkColor === null ? <div></div>
+        :
+        <div id="fondoTarjetaLogin" className="card auth-card input-field" style={{ backgroundColor: bkColor }}>
+          <img alt="logo" className="logo-login" src={logo} />
+          <div>
+            <input
+              type="number"
+              id='inputLogin'
+              placeholder="DNI"
+              value={dni}
+              onChange={(e) => setdni(e.target.value)}
+            />
+          </div>
+          <button
+            id="botonLogin"
+            className="btn waves-effect waves-light #64b5f6 red darken-1"
+            onClick={() => PostData()}
+          >
+            Ingresar
         </button>
-        <h5 id="H5Register">
-          <Link id="linkRegister" to="/login/admin">Ingresar como administrador</Link>
-          <tr />
-          <Link id="linkRegister" to="/register">Registrate acá</Link>
-        </h5>
-      </div>
+          <h5 id="H5Register">
+            <Link id="linkRegister" to="/login/admin">Ingresar como administrador</Link>
+            <tr />
+            <Link id="linkRegister" to="/register">Registrate acá</Link>
+          </h5>
+        </div>}
     </div>)
 };
 

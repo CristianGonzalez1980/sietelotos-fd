@@ -13,6 +13,8 @@ const PickedColor = () => {
     let [myColorFooter, pickedColorFooter] = useState('');
     let [myColorSide, pickedColorSide] = useState('');
     let [myColorWrapp, pickedColorWrapp] = useState('');
+    let [myColorCardLogin, pickedColorCardLogin] = useState('');
+
 
     const coustomPickerData = (denom) => {
         return ({
@@ -21,7 +23,7 @@ const PickedColor = () => {
             width: 280,
             height: 280,
             view: 'palette',
-            theme: 'light',
+            theme: 'light-theme',
             title: denom,
             cellControl: 4
         })
@@ -33,6 +35,7 @@ const PickedColor = () => {
         pickedColorFooter(data[0].backgroundColorFooter)
         pickedColorSide(data[0].backgroundColorSide)
         pickedColorWrapp(data[0].backgroundColorWrapp)
+        pickedColorCardLogin(data[0].backgroundColorCardLogin)
     }
 
     /*background-color: rgb(235, 214, 255);
@@ -61,68 +64,87 @@ height: 1.5rem;
         if (settings.backgroundColor !== myColor ||
             settings.backgroundColorFooter !== myColorFooter ||
             settings.backgroundColorSide !== myColorSide ||
-            settings.backgroundColorWrapp !== myColorWrapp) {
+            settings.backgroundColorWrapp !== myColorWrapp ||
+            settings.backgroundColorCardLogin !== myColorCardLogin) {
             postearUpdateEntity({
                 historyProp: history, entityClass: "settings", entity: settings, atributes: {
                     "backgroundColor": myColor,
                     "backgroundColorFooter": myColorFooter,
                     "backgroundColorSide": myColorSide,
-                    "backgroundColorWrapp": myColorWrapp
+                    "backgroundColorWrapp": myColorWrapp,
+                    "backgroundColorCardLogin": myColorCardLogin
                 }
             });
         }
     };
 
     return (
-        <div className='col'>
-            <div className="row">
+        <div className="row">
+            <div className='col s12 left'>
                 <AdminOptions />
-                <div className='col s4 left' style={{ marginTop: 10 }} >
-                    {settings !== null ?
-                        selectedColorButton(settings.backgroundColor)
-                        : <div></div>}
-                    <ColorSelector pallet={coustomPickerData("NAVBAR"/*  -Actual:${myColor} */)} selectedColor={pickedColor} />
-                    {/*                 <button onClick={(e) => {
-                        colorSetUp();
-                    }} className="waves-effect waves-light red lighten-2 btn-large colorPicker" id="butonSubmitColorPicker">Cambiar Color</button>
-     */}            </div>
-                <div className='col s4 left' style={{ marginTop: 10 }} >
-                    {settings !== null ?
-                        selectedColorButton(settings.backgroundColorFooter)
-                        : <div></div>}
-                    <ColorSelector pallet={coustomPickerData("FOOTER"/*  -Actual:${myColorFooter}` */)} selectedColor={pickedColorFooter} />
-                    {/*                 <button onClick={(e) => {
-                        colorSetUp();
-                    }} className="waves-effect waves-light red lighten-2 btn-large colorPicker" id="butonSubmitColorPicker">Cambiar Color</button>
- */}                </div>
-                <div className='col s4 left'>
-                    {settings !== null ?
-                        selectedColorButton(settings.backgroundColorSide)
-                        : <div></div>}
-                    <ColorSelector pallet={coustomPickerData("SIDEBAR"/*  -Actual:${myColorSide}` */)} selectedColor={pickedColorSide} />
-                    {/*                     <button onClick={(e) => {
-                        colorSetUp();
-                    }} className="waves-effect waves-light red lighten-2 btn-large colorPicker" id="butonSubmitColorPicker">Cambiar Color</button>
- */}                </div>
-                <div className='col s4 left'>
-                    {settings !== null ?
-                        selectedColorButton(settings.backgroundColorWrapp)
-                        : <div></div>}
-                    <ColorSelector pallet={coustomPickerData("WRAPPER"/*  -Actual:${myColorWrapp}` */)} selectedColor={pickedColorWrapp} />
-                    {/*                     <button onClick={(e) => {
-                        colorSetUp();
-                    }} className="waves-effect waves-light red lighten-2 btn-large colorPicker" id="butonSubmitColorPicker">Cambiar Color</button>
- */}                </div>
-                <div className="row">
-                    <div className='col s4' /* style={{ marginTop: 10 }} */ />
-                    <div className='col s8 right' /* style={{ marginTop: 10 }} */ >
-                        <button onClick={(e) => {
+                <div className='col s7 left'>
+                    <div className="row">
+                        <div className='col s6 left' style={{ marginTop: 10 }} >
+                            {settings !== null ?
+                                selectedColorButton(settings.backgroundColor)
+                                : <div></div>}
+                            <ColorSelector pallet={coustomPickerData("NAVBAR"/*  -Actual:${myColor} */)} selectedColor={pickedColor} />
+                            {/*                 <button onClick={(e) => {
                             colorSetUp();
-                        }} className="waves-effect waves-light red lighten-2 btn-large colorPicker" id="butonSubmitColorPicker">Cambiar Colores</button>
+                        }} className="waves-effect waves-light red lighten-2 btn-large colorPicker" id="butonSubmitColorPicker">Cambiar Color</button>
+        */}            </div>
+                        <div className='col s6 left' style={{ marginTop: 10 }} >
+                            {settings !== null ?
+                                selectedColorButton(settings.backgroundColorFooter)
+                                : <div></div>}
+                            <ColorSelector pallet={coustomPickerData("FOOTER"/*  -Actual:${myColorFooter}` */)} selectedColor={pickedColorFooter} />
+                            {/*                 <button onClick={(e) => {
+                            colorSetUp();
+                        }} className="waves-effect waves-light red lighten-2 btn-large colorPicker" id="butonSubmitColorPicker">Cambiar Color</button>
+    */}                </div>
+                    </div>
+                    <div className="row">
+                        <div className='col s6 left'>
+                            {settings !== null ?
+                                selectedColorButton(settings.backgroundColorSide)
+                                : <div></div>}
+                            <ColorSelector pallet={coustomPickerData("SIDEBAR"/*  -Actual:${myColorSide}` */)} selectedColor={pickedColorSide} />
+                            {/*                     <button onClick={(e) => {
+                            colorSetUp();
+                        }} className="waves-effect waves-light red lighten-2 btn-large colorPicker" id="butonSubmitColorPicker">Cambiar Color</button>
+    */}                </div>
+                        <div className='col s6 left'>
+                            {settings !== null ?
+                                selectedColorButton(settings.backgroundColorWrapp)
+                                : <div></div>}
+                            <ColorSelector pallet={coustomPickerData("WRAPPER"/*  -Actual:${myColorWrapp}` */)} selectedColor={pickedColorWrapp} />
+                            {/*                     <button onClick={(e) => {
+                            colorSetUp();
+                        }} className="waves-effect waves-light red lighten-2 btn-large colorPicker" id="butonSubmitColorPicker">Cambiar Color</button>
+    */}                </div>
+                    </div>
+                    <div className="row">
+                        <div className='col s6 left'>
+                            {settings !== null ?
+                                selectedColorButton(settings.backgroundColorCardLogin)
+                                : <div></div>}
+                            <ColorSelector pallet={coustomPickerData("LOGIN:"/*  -Actual:${myColorWrapp}` */)} selectedColor={pickedColorCardLogin} />
+                            {/*                     <button onClick={(e) => {
+                            colorSetUp();
+                        }} className="waves-effect waves-light red lighten-2 btn-large colorPicker" id="butonSubmitColorPicker">Cambiar Color</button>
+    */}                </div>
+                    </div>
+                    <div className="row">
+                        <div className='col s4' /* style={{ marginTop: 10 }} */ />
+                        <div className='col s8 right' /* style={{ marginTop: 10 }} */ >
+                            <button onClick={(e) => {
+                                colorSetUp();
+                            }} className="waves-effect waves-light red lighten-2 btn-large colorPicker" id="butonSubmitColorPicker">Cambiar Colores</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 export default PickedColor;
