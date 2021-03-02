@@ -1,0 +1,20 @@
+
+.card-image, .card, .card-action, .cardContent{
+border-color: rgba(255, 183, 0, 0.466);
+border-style:solid;
+border-width:thin;
+border-radius: 2%;
+background-color: rgba(255, 255, 255, 0.507);
+}
+
+.card-content{
+    margin-top: -3rem;
+}
+
+.lineaProducto{
+    border-color: rgba(255, 183, 0, 0.473);
+}
+
+  #botonAgregarAlCarrito {
+    margin-top: 0%;
+}
