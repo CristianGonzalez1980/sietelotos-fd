@@ -1,23 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
 
-.slider .slides li img {
- /*  background-size:100% auto; */
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
-  width : 100%; 
-}
+@media only screen and (max-width: 920px) {
+  .slider .slides li img {
+    /*  background-size:100% auto; */
+     background-repeat: no-repeat;
+     background-position: center;
+     height: 90%;
+     width : 90%; 
+   }
+   }
+
+@media only screen and (min-width: 920px) {
+  .slider .slides li img {
+    /*  background-size:100% auto; */
+     background-repeat: no-repeat;
+     background-position: center;
+     height: 100%;
+     width : 100%; 
+   }
+   }
+
 .slider .slides li {
   opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
-  max-height: 100%;
-  max-width : 100%; 
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0) !important;
 }
+
+@media only screen and (max-width: 920px) {
+  .slider .slides li {
+    max-height: 100%;
+    max-width : 100%; 
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .slider .slides li {
+    min-height: 100%;
+    max-width : 55%;
+    margin-left: 20.5rem;
+  }
+}
+
 .slider .indicators {
   position: absolute;
   text-align: center;

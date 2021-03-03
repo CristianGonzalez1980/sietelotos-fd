@@ -1,7 +1,7 @@
-#mypaginacion {
+/* #mypaginacion {
   margin-bottom: 10%;
 }
-
+ */
 .numero {
   font-family: "Lemonada", cursive;
   color: rgb(74, 245, 58);
@@ -11,4 +11,8 @@
 
 .pagination li.active {
   background-color: burlywood;
+}
+
+#divEmpresaConProD{
+  margin: 0.2px;
 }

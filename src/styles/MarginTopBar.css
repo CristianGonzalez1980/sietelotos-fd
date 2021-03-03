@@ -1,3 +1,12 @@
-#marginTop{
-margin-top: 169px;
+@media only screen and (max-width: 920px) {
+ #marginTop{  
+    margin-bottom: 145px;
+ }
 }
+
+@media only screen and (min-width: 920px) {
+    #marginTop{
+        margin-top: -39px;
+        margin-bottom: 200px;
+        }
+    }

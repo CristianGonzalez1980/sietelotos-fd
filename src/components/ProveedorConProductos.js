@@ -77,7 +77,8 @@ const ProveedorConProductos = (props) => {
   let styles = {
     backgroundImage: `url(${company.companyBanner})`,
     backgroundSize: '100%',
-    minHeight: " 14.9rem",
+    minHeight: "7rem",
+    margin: 0,
     backgroundRepeat: "no-repeat"
   }
 
@@ -92,7 +93,7 @@ const ProveedorConProductos = (props) => {
             </div>
             <br />
             {listOfProducts(company)}
-            <hr />
+           {/*  <hr /> */}
           </div>
       }
     </div>

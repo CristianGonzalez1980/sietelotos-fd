@@ -134,12 +134,12 @@ const NavBar = () => {
                             <div className="nav-wrapper" style={{ backgroundColor: bkColorWrapp }}>
                                 <a href="" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
                                 <ul className="hide-on-med-and-down">
-{/*                                     <li><Link className={Inicio ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setInicio(true)} onMouseLeave={() => setInicio(false)} to="/">Inicio</Link></li> */}
-                                    <li><Link className={Productos ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setProductos(true)} onMouseLeave={() => setProductos(false)} to="/suppliers">Productos</Link></li>
-                                    <li><Link className={Preguntas ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setPreguntas(true)} onMouseLeave={() => setPreguntas(false)} to="/faqs">Preguntas frecuentes</Link></li>
-                                    <li><Link className={CómoComprar ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setCómoComprar(true)} onMouseLeave={() => setCómoComprar(false)} to="/howtobuy">¿Cómo comprar?</Link></li>
-                                    <li><Link className={QuiénesSomos ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setQuiénesSomos(true)} onMouseLeave={() => setQuiénesSomos(false)} to="/aboutus">¿Quiénes somos?</Link></li>
-                                    <li><Link className={Contacto ? "animate__animated animate__heartBeat animate__repeat-1	1" : " "} onMouseEnter={() => setContacto(true)} onMouseLeave={() => setContacto(false)} to="/contact">Contacto</Link></li>
+{/*                                     <li><Link className={Inicio ? "animate__animated animate__headShake animate__repeat-1	1" : " "} onMouseEnter={() => setInicio(true)} onMouseLeave={() => setInicio(false)} to="/">Inicio</Link></li> */}
+                                    <li><Link className={Productos ? "animate__animated animate__headShake animate__repeat-1	1" : " "} onMouseEnter={() => setProductos(true)} onMouseLeave={() => setProductos(false)} to="/suppliers">Productos</Link></li>
+                                    <li><Link className={Preguntas ? "animate__animated animate__headShake animate__repeat-1	1" : " "} onMouseEnter={() => setPreguntas(true)} onMouseLeave={() => setPreguntas(false)} to="/faqs">Preguntas frecuentes</Link></li>
+                                    <li><Link className={CómoComprar ? "animate__animated animate__headShake animate__repeat-1	1" : " "} onMouseEnter={() => setCómoComprar(true)} onMouseLeave={() => setCómoComprar(false)} to="/howtobuy">¿Cómo comprar?</Link></li>
+                                    <li><Link className={QuiénesSomos ? "animate__animated animate__headShake animate__repeat-1	1" : " "} onMouseEnter={() => setQuiénesSomos(true)} onMouseLeave={() => setQuiénesSomos(false)} to="/aboutus">¿Quiénes somos?</Link></li>
+                                    <li><Link className={Contacto ? "animate__animated animate__headShake animate__repeat-1	1" : " "} onMouseEnter={() => setContacto(true)} onMouseLeave={() => setContacto(false)} to="/contact">Contacto</Link></li>
                                     <li className="right" >{renderPanelAdmin()}</li>
                                     <li className="right">{renderButton()}</li>
                                 </ul>

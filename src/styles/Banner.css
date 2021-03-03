@@ -7,14 +7,17 @@
     margin-top: -1%;
 }
 */
-@media only screen and (max-width: 600px) {
-    #indicatorsHomeBanner {
-        /* margin-top: -1%; */
+@media only screen and (max-width: 920px) {
+    .slider .slides li img {
+        margin-left: 5%;
     }
   }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 920px) {
     #indicatorsHomeBanner {
         margin-top: 15%;
+    }
+    .slider .slides li img {
+        margin-top: 0%;
     }
   }

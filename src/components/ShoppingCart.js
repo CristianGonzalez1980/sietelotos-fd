@@ -201,7 +201,7 @@ const ShoppingCart = () => {
                   {context.cart.map(cartItem => (
                     <tbody key={cartItem.id}>
                       <tr>
-                      <td id="tdCart">{cartItem.itemName}</td>
+                      <td id="tdCartName">{cartItem.itemName}</td>
                       <td id="bigCart"><img id="imgCart" alt={cartItem.itemName} src={cartItem.images[0]} /></td>
                       <td id="tdCart">$ {cartItem.itemPrice}</td>
                       <td id="tdCart">

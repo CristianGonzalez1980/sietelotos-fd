@@ -1,17 +1,22 @@
-#cardContent {
-  height: 14rem;
-  background-color: #fcd8ff;
-}
-
 #cardId {
   transition: box-shadow 0.3s;
-  width: 334px;
+  min-width: 330px;
+  min-height: 630px;
   height: 500px;
   border-radius: 10px;
   border: 1px solid #ccc;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.24);
   float: left;
+  padding: 0.75rem;
+  margin: 0px 4px 75px;
 }
+
+@media only screen and (max-width: 920px) {
+  #cardId {
+    margin-left: 20px;
+  }
+}
+
 #cardId:hover {
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
@@ -25,9 +30,9 @@
   color: #ffffff;
   text-decoration: none;
   transition: all 0.2s;
-  height: 70px;
+  height: 100%;
   width: 100%;
-  margin: 4px;
+  border-radius: 5px;
   border-block-color: rgb(216, 208, 208);
 }
 
@@ -38,12 +43,28 @@
   transition: all 0.5s;
 }
 
+#Carousel-2{
+  margin-top: -1.5rem;
+}
+
 #cardImageId {
-  background-color: #ffc0f2;
+  background-color: #ffc0f2bb;
+  height: 51.5%;
+}
+
+#cardContent {
+  background-color: #ef7cfabb;
+  height: 33.5%;
+  margin-top: 0rem;
+  border-radius: 3px;
+  padding: 0rem 3rem 0rem 3rem;
 }
 
 #cardAction {
-  background-color: #ffc0f2;
+  background-color: #fa7693b9;
+  width: 100%;
+  height: 9%;
+  border-radius: 10px;
 }
 
 #btnDisable {
@@ -59,4 +80,12 @@
 .btn-floating i{
 font-size: 2.6rem;
 background-color: rgba(255, 183, 0, 0.473);
+}
+
+/* #cardOfProducts{
+  padding-left: 0.1rem;
+} */
+
+.row .col.s3 {
+  width: 24%;
 }
