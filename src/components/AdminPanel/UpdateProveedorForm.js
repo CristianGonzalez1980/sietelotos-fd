@@ -86,7 +86,7 @@ const UpdateProveedorForm = (props) => {
               id="Nombre_de_la_Empresa" onChange={(e) => {
                 setCompanyName(e.target.value)
                 console.log(companyName)
-              }} type="text" class="validate" value={companyName} />
+              }} type="text" className="validate" value={companyName} />
             <label class="active" for="Nombre_de_la_Empresa">Nombre de la Empresa</label>
           </div>
           <div class="input-field col s6">

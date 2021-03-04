@@ -137,10 +137,14 @@ const ResultSearchProduct = (props) => {
     return (
         products ?
             <div>
-                <div>
-                    <div className="row">
-                        <div id="criteriasel" className="col s3"><h6>ORDENAR POR:</h6></div>
-                        <div className="col s7s">{orderButton(products)}</div>
+                <div className="row">
+                    <div className="col s4">
+                        <p id="criteriasel" >Ordenar por:</p>
+                    </div>
+                    <div className="col s4s">
+                        {orderButton(products)}
+                    </div>
+                    <div className="col s4s">
                     </div>
                 </div>
                 <div className='row'>

@@ -44,3 +44,17 @@
   padding-bottom: 2px;
   padding-right: 2px
 }
+
+@media only screen and (max-width: 920px) {
+  .mycard {
+    width: 80%;
+    height: 22rem;
+    margin-left: 10%;
+    margin-right: 10%; 
+    margin-top: 10.5rem;
+  }
+}
+
+hr{
+  color: rgba(255, 255, 255, 0.075);
+}

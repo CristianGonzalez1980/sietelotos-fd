@@ -79,7 +79,7 @@ const Login = () => {
         </button>
           <h5 id="H5Register">
             <Link id="linkRegister" to="/login/admin">Ingresar como administrador</Link>
-            <tr />
+            <hr />
             <Link id="linkRegister" to="/register">Registrate acá</Link>
           </h5>
         </div>}

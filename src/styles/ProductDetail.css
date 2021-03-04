@@ -1,20 +1,72 @@
 
-.card-image, .card, .card-action, .cardContent{
+.card-image, .card, .card-action-detail, .cardContent{
 border-color: rgba(255, 183, 0, 0.466);
 border-style:solid;
 border-width:thin;
 border-radius: 2%;
-background-color: rgba(255, 255, 255, 0.507);
+background-color: rgba(255, 255, 255, 0.356);
+}
+
+.detailPropertiesDesc{
+    font-size: 1.3rem;
+}
+
+.card-image{
+    padding: 0.1rem;
+    margin: 0px;
+}
+
+#cardViewProveedor_Product_Detail {
+    background-color: rgba(255, 255, 255, 0.356);
+    padding: 0.1rem;
 }
 
 .card-content{
     margin-top: -3rem;
+    width: 100%;
+}
+
+.card-action-detail{
+    margin-bottom: 1rem;
 }
 
 .lineaProducto{
     border-color: rgba(255, 183, 0, 0.473);
 }
 
-  #botonAgregarAlCarrito {
+#botonAgregarAlCarrito {
     margin-top: 0%;
+}
+
+@media only screen and (max-width: 920px) {
+ #colImageCard{
+    width: 54%;
+}
+
+#cardViewProveedor_Product_Detail {
+    min-height: 0%;
+} 
+ 
+.detailTitle{
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.detailDesc{
+    font-size: 1rem;
+    line-height: 100%;
+} 
+ 
+.card-action-detail{
+    width: 100%;
+    margin-top: -2rem;
+}
+ 
+ .detailPropertiesDesc{
+    font-size: 0.8rem;
+    line-height: 50%;
+} 
+.lineaProducto, .detailTitle, .detailPropertiesDesc, .card-action-detail, .detailDesc{
+    margin-left: 0.1rem;
+}
 }

@@ -82,7 +82,7 @@ height: 1.5rem;
         <div className="row">
             <div className='col s12 left'>
                 <AdminOptions />
-                <div className='col s7 left'>
+                <div className='col s8 left'>
                     <div className="row">
                         <div className='col s6 left' style={{ marginTop: 10 }} >
                             {settings !== null ?

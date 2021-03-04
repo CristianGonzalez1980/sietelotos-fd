@@ -12,9 +12,9 @@ const CourrierCard = (props) => {
     return (
         <label id="option" >
             <input name="style2" type="radio" onClick={() => { funcion(courrierName); funcion2(courrierCost) }}/>
-            <span>{courrierName}</span>
-            <span>: $</span>
-            <span>{courrierCost}</span>
+            <span id="optionName">{courrierName}</span>
+            <span id="optionSimbolo">: $</span>
+            <span id="optionCosto">{courrierCost}</span>
         </label>
     )
 }

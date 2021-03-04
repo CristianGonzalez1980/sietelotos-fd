@@ -90,7 +90,7 @@ const UpdateProductoForm = (props) => {
     if (url) {
       const list = url.map((elem) => {
         return (
-          <li>
+          <li key={elem}>
             <div className="col s1" id='colCard'>
               <div className="card" id='cardDeleteUP'>
                 <div className="card-image" id="imageUP">

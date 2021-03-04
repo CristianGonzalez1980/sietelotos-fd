@@ -9,7 +9,7 @@ const CardProviderwFx = (props) => {
 
     const list = companies.map((company) => {
         return (
-            <li>
+            <li key={company.id}>
                 <ProviderCard cp={company} fx={funcionD} icon={iconFx} />
             </li>
         )

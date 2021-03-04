@@ -27,9 +27,9 @@ const ProdcutDetail = () => {
         if (url) {
             const list = url.map((elem) => {
                 return (
-                    <li>
-                        <div className="col s2" id='colCard' style={{ margin: 1 }}>
-                            <div className="card" id='cardDeleteUP' style={{ margin: 9 }}>
+                    <li key={elem}>
+                        <div className="col s3" id='colImageCard' style={{ margin: 2 }}>
+                            <div className="card" id='cardDeleteUP' style={{ margin: 7 }}>
                                 <div className="card-image" id="imageUP" >
                                     <img alt="productImage" src={elem} onClick={() => { setSelectedImage(elem) }} />
                                 </div>
@@ -54,37 +54,35 @@ const ProdcutDetail = () => {
                 {context => (
                     <React.Fragment>
                         <div className="row" style={{ paddingTop: 30 }}>
-                            <div className="col s1" />
-                            <div className="col s4" id='colCard'>
-                                <div className="card" id='cardViewProveedor_Product'>
+                            <div className="col s6" id='colImageCard'>
+                                <div className="card" id='cardViewProveedor_Product_Detail'>
                                     <div className="card-image" style={{ padding: 10 }}>
                                         <img alt="productImage" src={selectedImage} />
                                         {listOfImages()}
                                     </div>
                                 </div>
                             </div>
-                            <div className="col s6"/*  id='colCard' */>
+                            <div className="col s6"/*  id='colImageCard' */>
                                 <div className="card-content" style={{ marginBottom: 50 }}>
-                                    <strong><h3> {product.itemName}</h3></strong>
-                                    <hr className="lineaProducto"/>
-                                    <h5 > {product.description} </h5>
-                                    <p > Longitud en cm: {product.longitud} </p>
-                                    <p > Ancho en cm: {product.ancho} </p>
-                                    <p > Alto en cm : {product.alto} </p>
-                                    <p > Peso en gr: {product.peso} </p>
-                                    <p > Stock unidades: {product.stock} </p>
-                                    <p > Precio $: {product.itemPrice} </p>
-                                    <p > Precio Promocional $: {product.promotionalPrice} </p>
+                                    <strong><h3 className="detailTitle"> {product.itemName}</h3></strong>
+                                    <hr className="lineaProducto" />
+                                    <h5 className="detailDesc"> {product.description} </h5>
+                                    <p className="detailPropertiesDesc"> Longitud en cm: {product.longitud} </p>
+                                    <p className="detailPropertiesDesc"> Ancho en cm: {product.ancho} </p>
+                                    <p className="detailPropertiesDesc"> Alto en cm : {product.alto} </p>
+                                    <p className="detailPropertiesDesc"> Peso en gr: {product.peso} </p>
+                                    <p className="detailPropertiesDesc"> Stock unidades: {product.stock} </p>
+                                    <p className="detailPropertiesDesc"> Precio $: {product.itemPrice} </p>
+                                    <p className="detailPropertiesDesc"> Precio Promocional $: {product.promotionalPrice} </p>
                                 </div>
-                                <div className="card-action" id="cardAction">
+                                <div className="card-action-detail" id="cardAction">
                                     {product.stock === 0 ?
                                         <button id="btnDisable" disabled >Sin Stock</button>
                                         :
-                                        <button id="botonAgregarAlCarrito" style={{ height: 50  }} onClick={context.addProductToCart.bind(this, product)}>Agregar al carrito</button>
+                                        <button id="botonAgregarAlCarrito" style={{ height: 50 }} onClick={context.addProductToCart.bind(this, product)}>Agregar al carrito</button>
                                     }
                                 </div>
                             </div>
-                            <div className="col s1" />
                         </div>
                     </React.Fragment>
                 )}

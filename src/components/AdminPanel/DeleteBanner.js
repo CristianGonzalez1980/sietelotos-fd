@@ -39,7 +39,7 @@ const DeleteBanner = () => {
       const bannersByCategory = banners.filter(banner => banner.category === category)
       const list = bannersByCategory.map((banner) => {
         return (
-          <li>
+          <li key={banner.id} >
             <div className="col s1" id='colCard'>
               <div className="card" id='cardDeleteBD'>
                 <div className="card-image" id="imageDB">
